@@ -3,7 +3,7 @@
  local Window = OrionLib:MakeWindow({
      IntroText = "郑脚本 | 终极整合版",
      Name = "郑脚本-测试版",
-     HidePremium = true,  -- 隐藏付费区域，界面更整洁
+     HidePremium = true,
      SaveConfig = true,
      ConfigFolder = "ZhengScript"
  })
@@ -37,7 +37,12 @@
      Name = "99夜",
      Icon = "rbxassetid://7733779610"
  })
- -- 工作人员 独立分页（纯文字展示）
+ -- 最强战场 独立分页
+ local BattleTab = Window:MakeTab({
+     Name = "最强战场",
+     Icon = "rbxassetid://7733779610"
+ })
+ -- 工作人员 独立分页
  local StaffTab = Window:MakeTab({
      Name = "工作人员",
      Icon = "rbxassetid://7733779610"
@@ -45,7 +50,8 @@
  -- 添加展示文本
  StaffTab:AddLabel("脚本制作人员：b站游戏爱好者郑祥富")
  StaffTab:AddLabel("Ui制作人员：b站游戏爱好者郑祥富")
- -- 脚本功能页面原有按钮
+ StaffTab:AddLabel("协同制作员：b站roblox星际")
+ -- ==================== 脚本功能页面 ====================
  MainTab:AddButton({
      Name = "脚本中心",
      Callback = function()
@@ -98,7 +104,6 @@
          OrionLib:Notify("郑脚本-测试版","xa hub启动成功",4)
      end
  })
- -- 新增：黑白脚本 按钮
  MainTab:AddButton({
      Name = "黑白脚本",
      Callback = function()
@@ -106,7 +111,31 @@
          OrionLib:Notify("郑脚本-测试版","黑白脚本启动成功",4)
      end
  })
- -- 力量传奇分类按钮
+ MainTab:AddButton({
+     Name = "FPS和延迟显示",
+     Callback = function()
+         loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-FPS-And-Ping-Display-23120"))()
+         OrionLib:Notify("郑脚本-测试版","FPS和延迟显示 启动成功",4)
+     end
+ })
+ MainTab:AddButton({
+     Name = "无敌少侠飞行",
+     Callback = function()
+         loadstring(game:HttpGet("https://raw.githubusercontent.com/ke9460394-dot/ugik/refs/heads/main/%E6%97%A0%E6%95%8C%E5%B0%91%E4%BE%A0%E9%A3%9E%E8%A1%8Cr6.txt"))()
+         OrionLib:Notify("郑脚本-测试版","无敌少侠飞行 启动成功",4)
+     end
+ })
+ MainTab:AddButton({
+     Name = "林脚本",
+     Callback = function()
+         lin = "作者林"
+         lin = "林QQ群 747623342"
+         loadstring(game:HttpGet("https://raw.githubusercontent.com/linnblin/lin/main/lin"))()
+         OrionLib:Notify("郑脚本-测试版","林脚本启动成功",4)
+     end
+ })
+ MainTab:AddLabel("林脚本卡密：林nb")
+ -- ==================== 力量传奇页面 ====================
  MuscleTab:AddButton({
      Name = "Nov23Y",
      Callback = function()
@@ -129,7 +158,7 @@
          OrionLib:Notify("郑脚本-测试版","猫脚本启动成功",4)
      end
  })
- -- 画我分类下按钮
+ -- ==================== 画我页面 ====================
  DrawTab:AddButton({
      Name = "画我无卡密",
      Callback = function()
@@ -137,7 +166,7 @@
          OrionLib:Notify("郑脚本-测试版","画我无卡密启动成功",4)
      end
  })
- -- Doors分页原有按钮
+ -- ==================== Doors页面 ====================
  DoorsTab:AddButton({
      Name = "sumeber hub",
      Callback = function()
@@ -145,7 +174,6 @@
          OrionLib:Notify("郑脚本-测试版","sumeber hub 启动成功",4)
      end
  })
- -- 新增：sumeber hub汉化版（Doors分类）
  DoorsTab:AddButton({
      Name = "sumeber hub汉化版",
      Callback = function()
@@ -153,7 +181,7 @@
          OrionLib:Notify("郑脚本-测试版","sumeber hub汉化版 启动成功",4)
      end
  })
- -- 忍者传奇分页按钮
+ -- ==================== 忍者传奇页面 ====================
  NinjaTab:AddButton({
      Name = "APEX HUB",
      Callback = function()
@@ -168,12 +196,50 @@
          OrionLib:Notify("郑脚本-测试版","一键刷83个绝版宠物 启动成功",4)
      end
  })
- -- 99夜分页按钮
+ -- ==================== 99夜页面 ====================
  Night99Tab:AddButton({
      Name = "虚空汉化",
      Callback = function()
          loadstring(game:HttpGet("https://raw.githubusercontent.com/atnew2025/Chinese-scripts/refs/heads/main/voidware-cn.txt"))()
          OrionLib:Notify("郑脚本-测试版","虚空汉化 启动成功",4)
+     end
+ })
+ -- ==================== 最强战场页面 ====================
+ BattleTab:AddButton({
+     Name = "supa自动",
+     Callback = function()
+         loadstring(game:HttpGet("https://rawscripts.net/raw/The-Strongest-Battlegrounds-Supa-tech-v2-77454"))()
+         OrionLib:Notify("郑脚本-测试版","supa自动 启动成功",4)
+     end
+ })
+ BattleTab:AddButton({
+     Name = "操纵灵敏度",
+     Callback = function()
+         loadstring(game:HttpGet("https://pastebin.com/raw/UQE2KDxV"))()
+         OrionLib:Notify("郑脚本-测试版","操纵灵敏度 启动成功",4)
+     end
+ })
+ BattleTab:AddButton({
+     Name = "垃圾桶战神",
+     Callback = function()
+         loadstring(game:HttpGet("https://raw.githubusercontent.com/yes1nt/yes/refs/heads/main/Trashcan%20Man", true))()
+         OrionLib:Notify("郑脚本-测试版","垃圾桶战神 启动成功",4)
+     end
+ })
+ -- 新增：五条悟
+ BattleTab:AddButton({
+     Name = "五条悟",
+     Callback = function()
+         loadstring(game:HttpGet("https://raw.githubusercontent.com/Kamyk-player/FinalSuperSenior/refs/heads/main/SaitamaToSuperSeniorGojo"))()
+         OrionLib:Notify("郑脚本-测试版","五条悟 启动成功",4)
+     end
+ })
+ -- 新增：自动1+2
+ BattleTab:AddButton({
+     Name = "自动1+2",
+     Callback = function()
+         loadstring(game:HttpGet("https://raw.githubusercontent.com/Cyborg883/KyotoTechRework/refs/heads/main/Protected_9378660372508532.lua"))()
+         OrionLib:Notify("郑脚本-测试版","自动1+2 启动成功",4)
      end
  })
  print("✅ 全部功能加载完成")
