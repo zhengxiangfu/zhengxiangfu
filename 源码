@@ -1,34 +1,31 @@
--- 欢迎使用郑脚本脚本主作者：游戏爱好者郑祥富 副作者：Roblox星际
-local HttpS = game:GetService("HttpService")
+local WasUIPro = loadstring(game:HttpGet("https://raw.githubusercontent.com/WasKKal/WasUI-For-Roblox/main/WasUIPro.lua", true))()
 local Uis = game:GetService("UserInputService")
--- 加载WasUI替换原OrionUI
-local WasUI = loadstring(game:HttpGet("https://raw.githubusercontent.com/WasKKal/WasUI-For-Roblox/main/test.lua", true))()
+local Players = game:GetService("Players")
 
---[[主题设置可选
-WasUI:SetDefaultTheme("Blue") --Dark/Light/Blue
-WasUI:SetDefaultRainbowMode("流动") --整体/流动
-WasUI:SetLanguage("中文")
-]]
+WasUIPro:SetDefaultTheme("Dark")
+WasUIPro:SetDefaultRainbowMode("流动")
+WasUIPro:SetLanguage("中文")
 
---配置文件夹
-local cfg = WasUI:CreateFolder("ZhengScript")
---窗口头部标签
-local titleTags = {
-    { text = "Ver1.0", backgroundColor = Color3.fromRGB(0,152,211), textColor = Color3.fromRGB(255,255,255) },
-    { text = "郑脚本", backgroundColor = Color3.fromRGB(255,80,80), textColor = Color3.fromRGB(255,255,255) }
-}
---创建主窗口
-local mainWindow = WasUI:CreateWindow("郑脚本 |主作者：游戏爱好者郑祥富 副作者：ROBLOX星际", nil, nil, nil, true, titleTags)
-mainWindow:SetWelcome("欢迎使用郑脚本-1.0")
-mainWindow:SetMinimizedText("郑脚本")
-WasUI.DialogTitle = "确认关闭郑脚本?"
-WasUI:SetGroupButtonText("郑脚本交流群")
-WasUI:SetGroupCopyContent("填写你的群号")
+local mainWindow = WasUIPro:CreateWindow({
+    Title = "郑脚本 | 主作者：游戏爱好者郑祥富 副作者：ROBLOX星际",
+    WelcomeText = "欢迎使用郑脚本-1.0",
+    MinimizedText = "郑脚本",
+    Theme = "Dark",
+    RainbowMode = "流动",
+    DialogTitle = "确认关闭郑脚本?",
+    GroupText = "郑脚本交流群",
+    GroupCopy = "107370.1191",
+    SnowEnabled = false,
+    Folder = "ZhengScript",
+    TitleTag = {
+        { text = "Ver1.0", backgroundColor = Color3.fromRGB(0,152,211), textColor = Color3.fromRGB(255,255,255) },
+        { text = "郑脚本", backgroundColor = Color3.fromRGB(255,80,80), textColor = Color3.fromRGB(255,255,255) }
+    }
+})
 
---弹窗
 task.spawn(function()
     task.wait(0.5)
-    WasUI:Popup({
+    WasUIPro:Popup({
         title = "欢迎使用郑脚本",
         titleIcon = "sparkles",
         content = "作者：b站游戏爱好者郑祥富\n副作者：Roblox星际\nF1隐藏/显示UI",
@@ -38,174 +35,603 @@ task.spawn(function()
     })
 end)
 
---=============== 创建所有原分页 ===============
-local MainTab = mainWindow:AddTab("脚本功能")
-local MuscleTab = mainWindow:AddTab("力量传奇")
-local DrawTab = mainWindow:AddTab("画我")
-local DoorsTab = mainWindow:AddTab("Doors")
-local NinjaTab = mainWindow:AddTab("忍者传奇")
-local Night99Tab = mainWindow:AddTab("99夜")
-local BattleTab = mainWindow:AddTab("最强战场")
-local DeadRailsTab = mainWindow:AddTab("死铁轨")
-local StaffTab = mainWindow:AddTab("工作人员")
+--==================== 通用功能（第一个Tab，立刻写内容）====================
+local UniversalTab = mainWindow:Tab({ Title = "通用功能" })
+local UniversalCategory = UniversalTab:Category({ Title = "移动速度修改", IconName = "gauge" })
 
-WasUI:CreateCategory(StaffTab,"制作人员信息")
-WasUI:CreateLabel(StaffTab,"脚本制作人员：b站游戏爱好者郑祥富")
-WasUI:CreateLabel(StaffTab,"副作者：Roblox星际")
+local speedSlider
+speedSlider = UniversalCategory:Slider({
+    Title = "移速滑块",
+    Min = 0,
+    Max = 250,
+    Default = 16,
+    Callback = function(value)
+        local char = game.Players.LocalPlayer.Character
+        if char and char:FindFirstChild("Humanoid") then
+            char.Humanoid.WalkSpeed = value
+            WasUIPro:Notify({ Title = "移动速度", Content = "已设置为: " .. value, Duration = 1 })
+        end
+    end
+})
+UniversalCategory:TextInput({
+    Title = "移速数值",
+    Placeholder = "请输入移速倍数(默认16)",
+    Callback = function(value)
+        local num = tonumber(value)
+        if num and game.Players.LocalPlayer and game.Players.LocalPlayer.Character then
+            local char = game.Players.LocalPlayer.Character
+            local hrp = char:FindFirstChild("HumanoidRootPart")
+            local hum = char:FindFirstChild("Humanoid")
+            if hrp and hum then
+                hrp.Velocity = hrp.Velocity.Unit * num
+                hum.WalkSpeed = num
+                WasUIPro:Notify({ Title = "移动速度", Content = "已设置为: " .. num, Duration = 2 })
+            end
+        end
+    end
+})
+UniversalCategory:Button({
+    Text = "重置移速(16)",
+    Callback = function()
+        local char = game.Players.LocalPlayer.Character
+        if char and char:FindFirstChild("Humanoid") then
+            char.Humanoid.WalkSpeed = 16
+            WasUIPro:Notify({ Title = "移动速度", Content = "已重置为16", Duration = 2 })
+        end
+    end
+})
 
---==================== 脚本功能页面 全部按钮保留原功能 ====================
-WasUI:CreateCategory(MainTab,"综合脚本中心")
+local JumpCategory = UniversalTab:Category({ Title = "跳跃高度修改", IconName = "arrow-up" })
+local jumpSlider
+jumpSlider = JumpCategory:Slider({
+    Title = "跳跃高度滑块",
+    Min = 0,
+    Max = 250,
+    Default = 50,
+    Callback = function(value)
+        local char = game.Players.LocalPlayer.Character
+        if char and char:FindFirstChild("Humanoid") then
+            char.Humanoid.JumpPower = value
+            WasUIPro:Notify({ Title = "跳跃高度", Content = "已设置为: " .. value, Duration = 1 })
+        end
+    end
+})
+JumpCategory:TextInput({
+    Title = "跳跃高度数值",
+    Placeholder = "请输入跳跃高度(默认50)",
+    Callback = function(value)
+        local num = tonumber(value)
+        if num and game.Players.LocalPlayer and game.Players.LocalPlayer.Character then
+            local hum = game.Players.LocalPlayer.Character:FindFirstChild("Humanoid")
+            if hum then
+                hum.JumpPower = num
+                WasUIPro:Notify({ Title = "跳跃高度", Content = "已设置为: " .. num, Duration = 2 })
+            end
+        end
+    end
+})
+JumpCategory:Button({
+    Text = "重置跳跃高度(50)",
+    Callback = function()
+        local char = game.Players.LocalPlayer.Character
+        if char and char:FindFirstChild("Humanoid") then
+            char.Humanoid.JumpPower = 50
+            WasUIPro:Notify({ Title = "跳跃高度", Content = "已重置为50", Duration = 2 })
+        end
+    end
+})
 
-WasUI:CreateButton(MainTab,"脚本中心",function()
-    loadstring(utf8.char((function() return table.unpack({108,111,97,100,116,114,105,110,103,40,103,97,109,101,58,72,116,116,112,71,101,116,40,34,104,116,116,112,115,58,47,47,114,97,119,46,103,105,116,104,117,117,99,111,110,116,101,110,116,46,99,111,109,47,47,67,104,105,110,97,81,89,47,45,47,109,97,105,110,47,37,69,54,37,56,51,37,56,53,37,69,52,37,66,65,37,57,49,34,41,41,40,41})end)()))()
-    WasUI:Notify({Title = "郑脚本-测试版",Content = "脚本中心启动成功",Duration = 4})
-end,nil,nil,"一键启动脚本中心合集")
+local GravityCategory = UniversalTab:Category({ Title = "重力修改", IconName = "globe" })
+local gravitySlider
+gravitySlider = GravityCategory:Slider({
+    Title = "重力滑块",
+    Min = 0,
+    Max = 250,
+    Default = 196.2,
+    Callback = function(value)
+        game.Workspace.Gravity = value
+        WasUIPro:Notify({ Title = "重力", Content = "已设置为: " .. value, Duration = 1 })
+    end
+})
+GravityCategory:TextInput({
+    Title = "重力数值",
+    Placeholder = "请输入重力值(默认196.2)",
+    Callback = function(value)
+        local num = tonumber(value)
+        if num then
+            game.Workspace.Gravity = num
+            WasUIPro:Notify({ Title = "重力", Content = "已设置为: " .. num, Duration = 2 })
+        end
+    end
+})
+GravityCategory:Button({
+    Text = "重置重力(196.2)",
+    Callback = function()
+        game.Workspace.Gravity = 196.2
+        WasUIPro:Notify({ Title = "重力", Content = "已重置为196.2", Duration = 2 })
+    end
+})
 
-WasUI:CreateButton(MainTab,"Doors Mspaint",function()
-    loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/002c19202c9946e6047b0c6e0ad51f84.lua"))()
-    WasUI:Notify({Title = "郑脚本-测试版",Content = "Doors Mspaint启动成功",Duration = 4})
-end,nil,nil,"Doors专用Mspaint脚本")
+local NoclipCategory = UniversalTab:Category({ Title = "穿墙功能", IconName = "ghost" })
+local noclipEnabled = false
+local noclipConnection = nil
+NoclipCategory:Toggle({
+    Title = "穿墙模式",
+    Value = false,
+    Callback = function(enabled)
+        noclipEnabled = enabled
+        if enabled then
+            WasUIPro:Notify({ Title = "穿墙模式", Content = "已开启", Duration = 2 })
+            noclipConnection = game:GetService("RunService").Stepped:Connect(function()
+                if noclipEnabled and game.Players.LocalPlayer and game.Players.LocalPlayer.Character then
+                    local char = game.Players.LocalPlayer.Character
+                    for _, v in pairs(char:GetDescendants()) do
+                        if v:IsA("BasePart") then
+                            v.CanCollide = false
+                        end
+                    end
+                end
+            end)
+        else
+            WasUIPro:Notify({ Title = "穿墙模式", Content = "已关闭", Duration = 2 })
+            if noclipConnection then
+                noclipConnection:Disconnect()
+                noclipConnection = nil
+            end
+            if game.Players.LocalPlayer and game.Players.LocalPlayer.Character then
+                local char = game.Players.LocalPlayer.Character
+                for _, v in pairs(char:GetDescendants()) do
+                    if v:IsA("BasePart") then
+                        v.CanCollide = true
+                    end
+                end
+            end
+        end
+    end
+})
 
-WasUI:CreateButton(MainTab,"皮脚本",function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/xiaopi77/xiaopi77/main/QQ1002100032-Roblox-Pi-script.lua"))()
-    WasUI:Notify({Title = "郑脚本-测试版",Content = "皮脚本启动成功",Duration = 4})
-end,nil,nil,"小皮综合脚本")
+local InfiniteJumpCategory = UniversalTab:Category({ Title = "无限跳跃", IconName = "repeat" })
+local infiniteJumpEnabled = false
+local infiniteJumpConnection = nil
+InfiniteJumpCategory:Toggle({
+    Title = "无限跳跃",
+    Value = false,
+    Callback = function(enabled)
+        infiniteJumpEnabled = enabled
+        if enabled then
+            WasUIPro:Notify({ Title = "无限跳跃", Content = "已开启 | 在空中也可以跳跃", Duration = 2 })
+            infiniteJumpConnection = game:GetService("UserInputService").JumpRequest:Connect(function()
+                if infiniteJumpEnabled and game.Players.LocalPlayer and game.Players.LocalPlayer.Character then
+                    local hum = game.Players.LocalPlayer.Character:FindFirstChild("Humanoid")
+                    if hum then
+                        hum:ChangeState(Enum.HumanoidStateType.Jumping)
+                    end
+                end
+            end)
+        else
+            WasUIPro:Notify({ Title = "无限跳跃", Content = "已关闭", Duration = 2 })
+            if infiniteJumpConnection then
+                infiniteJumpConnection:Disconnect()
+                infiniteJumpConnection = nil
+            end
+        end
+    end
+})
 
-WasUI:CreateButton(MainTab,"刘某中心",function()
-    local data = {{1,"h"},{2,"t"},{3,"t"},{4,"p"},{5,"s"},{6,":"},{7,"/"},{8,"/"},{9,"p"},{10,"a"},{11,"s"},{12,"t"},{13,"e"},{14,"f"},{15,"y"},{16,"."},{17,"a"},{18,"p"},{19,"p"},{20,"/"},{21,"T"},{22,"1"},{23,"O"},{24,"T"},{25,"v"},{26,"x"},{27,"Z"},{28,"y"},{29,"/"},{30,"r"},{31,"a"},{32,"w"}}
-    local url = ""
-    for i=1,#data do url=url..data[i][2] end
-    loadstring(game:HttpGet(url))()
-    WasUI:Notify({Title = "郑脚本-测试版",Content = "刘某中心启动成功",Duration = 4})
-end,nil,nil,"刘某综合功能中心")
+local R6Category = UniversalTab:Category({ Title = "R6动作", IconName = "drama" })
+R6Category:Button({
+    Text = "Kenny动画中心",
+    Tooltip = "R6角色动作动画中心",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/ke9460394-dot/ugik/refs/heads/main/Kenny动画中心.lua"))()
+        WasUIPro:Notify({ Title = "R6动作", Content = "Kenny动画中心 启动成功", Duration = 3 })
+    end
+})
+R6Category:Button({
+    Text = "抓取NPC",
+    Tooltip = "抓取NPC/NPC角色交互",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/GUI-Offical/FileTest/refs/heads/main/Grab%20R6.txt", true))()
+        WasUIPro:Notify({ Title = "R6动作", Content = "抓取NPC 启动成功", Duration = 3 })
+    end
+})
 
-WasUI:CreateButton(MainTab,"IIF中心",function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/IIFNGZ2099/IIF-/refs/heads/main/IFFscript.lua"))()
-    WasUI:Notify({Title = "郑脚本-测试版",Content = "IIF中心启动成功",Duration = 4})
-end,nil,nil,"IIF多功能Hub")
+-- 新增：防甩飞相关 & 飞踢脚本
+local AntiFallCategory = UniversalTab:Category({ Title = "防甩飞/动作脚本", IconName = "shield" })
+local Players = game:GetService("Players")
+local RunService = game:GetService("RunService")
+local PhysicsService = game:GetService("PhysicsService")
+local Me = Players.LocalPlayer
 
-WasUI:CreateButton(MainTab,"ROB V2",function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/Zyb150933/ROB/refs/heads/main/ROB.V2"))()
-    WasUI:Notify({Title = "郑脚本-测试版",Content = "ROB V2启动成功",Duration = 4})
-end,nil,nil,"ROB.V2多功能脚本")
+-- 防甩飞1
+AntiFallCategory:Button({
+    Text = "防甩飞1",
+    Callback = function()
+        local Char = Me.Character or Me.CharacterAdded:Wait()
+        local Root = Char:FindFirstChildOfClass("HumanoidRootPart")
+        local Hum = Char:FindFirstChildOfClass("Humanoid")
+        local MAX_SPEED = 50
+        local MAX_ANGULAR = 50
 
-WasUI:CreateButton(MainTab,"xa hub",function()
-    loadstring("\108\111\97\100\116\114\105\110\103\40\103\97\109\101\58\72\116\116\112\71\101\116\40\34\104\116\116\112\115\58\47\47\114\97\119\46\103\105\116\104\117\115\101\114\99\111\110\116\101\110\116\46\99\111\109\47\47\66\73\78\106\105\97\111\98\122\120\54\47\66\73\78\106\105\97\111\47\109\97\105\110\47\88\75\46\84\88\84\34\41\41\40\41\10")()
-    WasUI:Notify({Title = "郑脚本-测试版",Content = "xa hub启动成功",Duration = 4})
-end,nil,nil,"XA多功能Hub")
+        local function onCharacterAdded(c)
+            Char = c
+            Root = Char:FindFirstChildOfClass("HumanoidRootPart")
+            Hum = Char:FindFirstChildOfClass("Humanoid")
+        end
+        Me.CharacterAdded:Connect(onCharacterAdded)
 
-WasUI:CreateButton(MainTab,"黑白脚本",function()
-    loadstring(game:HttpGet('https://raw.githubusercontent.com/tfcygvunbind/Apple/main/黑白脚本加载器'))()
-    WasUI:Notify({Title = "郑脚本-测试版",Content = "黑白脚本启动成功",Duration = 4})
-end,nil,nil,"黑白综合脚本")
+        RunService.PreSimulation:Connect(function()
+            if not (Root and Hum and Hum.Health > 0) then return end
+            local vel = Root.AssemblyLinearVelocity
+            local ang = Root.AssemblyAngularVelocity
+            if vel.Magnitude > MAX_SPEED or ang.Magnitude > MAX_ANGULAR then
+                Root.AssemblyLinearVelocity = Vector3.new(0, Root.AssemblyLinearVelocity.Y, 0)
+                Root.AssemblyAngularVelocity = Vector3.new(0,0,0)
+            end
+        end)
+        WasUIPro:Notify({ Title = "功能加载", Content = "防甩飞1 已启动", Duration = 2 })
+    end
+})
 
-WasUI:CreateButton(MainTab,"FPS和延迟显示",function()
-    loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-FPS-And-Ping-Display-23120"))()
-    WasUI:Notify({Title = "郑脚本-测试版",Content = "FPS和延迟显示 启动成功",Duration = 4})
-end,nil,nil,"屏幕实时帧率、延迟展示")
+-- 防甩飞2
+AntiFallCategory:Button({
+    Text = "防甩飞2",
+    Callback = function()
+        local CollisionGroup = "NoPlayerCollide"
+        PhysicsService:RegisterCollisionGroup(CollisionGroup)
+        PhysicsService:CollisionGroupSetCollidable(CollisionGroup, CollisionGroup, false)
 
-WasUI:CreateButton(MainTab,"无敌少侠飞行",function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/ke9460394-dot/ugik/refs/heads/main/%E6%97%A0%E6%95%8C%E5%B0%91%E4%BE%A0%E9%A3%9E%E8%A1%8Cr6.txt"))()
-    WasUI:Notify({Title = "郑脚本-测试版",Content = "无敌少侠飞行 启动成功",Duration = 4})
-end,nil,nil,"全局飞行+无敌功能")
+        local function SetGroup(part)
+            if part:IsA("BasePart") then
+                part.CollisionGroup = CollisionGroup
+            end
+        end
 
-WasUI:CreateButton(MainTab,"林脚本",function()
-    lin = "作者林"
-    lin = "林QQ群 747623342"
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/linnblin/lin/main/lin"))()
-    WasUI:Notify({Title = "郑脚本-测试版",Content = "林脚本启动成功",Duration = 4})
-end,nil,nil,"林大佬综合脚本")
-WasUI:CreateLabel(MainTab,"林脚本卡密：林nb")
+        local function OnCharAdded(c)
+            for _,desc in ipairs(c:GetDescendants()) do
+                SetGroup(desc)
+            end
+        end
+        Me.CharacterAdded:Connect(OnCharAdded)
+        if Me.Character then task.spawn(OnCharAdded, Me.Character) end
+        WasUIPro:Notify({ Title = "功能加载", Content = "防甩飞2 已启动", Duration = 2 })
+    end
+})
 
-WasUI:CreateButton(MainTab,"yihub",function()
-    getgenv().YI_HUB = "YI_HUB群979312897"
-    loadstring(game:HttpGet('https://raw.githubusercontent.com/YI-HUB-TEAM/YIscript/refs/heads/main/YI_HUB'))("")
-    WasUI:Notify({Title = "郑脚本-测试版",Content = "yihub 启动成功",Duration = 4})
-end,nil,nil,"YI-HUB多功能脚本")
+-- 飞踢脚本（已修改名称）
+AntiFallCategory:Button({
+    Text = "飞踢脚本",
+    Callback = function()
+        loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Fe-DropKick-Script-165813"))()
+        WasUIPro:Notify({ Title = "功能加载", Content = "飞踢脚本 已启动", Duration = 2 })
+    end
+})
 
--- ==================== 力量传奇页面 ====================
-WasUI:CreateCategory(MuscleTab,"力量传奇专属脚本")
-WasUI:CreateButton(MuscleTab,"Nov23Y",function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/Nov23Y/Nov23Y/refs/heads/main/Nov23Y."))()
-    WasUI:Notify({Title = "郑脚本-测试版",Content = "Nov23Y启动成功",Duration = 4})
-end)
-WasUI:CreateButton(MuscleTab,"安脚本",function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/Anscripterato/QQ2134702438/refs/heads/main/byato/AnScript/atoscript"))()
-    WasUI:Notify({Title = "郑脚本-测试版",Content = "安脚本启动成功",Duration = 4})
-end)
-WasUI:CreateButton(MuscleTab,"猫脚本",function()
-    local code = game:HttpGet("https://cdn.jsdelivr.net/gh//kitten-maomao/liliang/%E7%8C%AB%E8%84%9A%E6%9C%AC%E5%8A%9B%E9%87%8F%E4%BC%A0%E5%A5%87%E6%B7%B7%E6%B7%86.lua")
-    loadstring(code)("猫脚本")
-    WasUI:Notify({Title = "郑脚本-测试版",Content = "猫脚本启动成功",Duration = 4})
-end)
+local AutoResetCategory = UniversalTab:Category({ Title = "自动恢复设置", IconName = "refresh-cw" })
+local autoResetEnabled = false
+local autoResetConnection = nil
+AutoResetCategory:Toggle({
+    Title = "死亡后自动恢复移速/跳跃",
+    Value = false,
+    Callback = function(enabled)
+        autoResetEnabled = enabled
+        if enabled then
+            WasUIPro:Notify({ Title = "自动恢复", Content = "已开启", Duration = 2 })
+            autoResetConnection = game.Players.LocalPlayer.CharacterAdded:Connect(function(char)
+                task.wait(0.5)
+                local hum = char:FindFirstChild("Humanoid")
+                if hum then
+                    hum.WalkSpeed = speedSlider.Value or 16
+                    hum.JumpPower = jumpSlider.Value or 50
+                end
+            end)
+        else
+            WasUIPro:Notify({ Title = "自动恢复", Content = "已关闭", Duration = 2 })
+            if autoResetConnection then
+                autoResetConnection:Disconnect()
+                autoResetConnection = nil
+            end
+        end
+    end
+})
 
--- ==================== 画我页面 ====================
-WasUI:CreateCategory(DrawTab,"画我专属功能")
-WasUI:CreateButton(DrawTab,"画我无卡密",function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/ke9460394-dot/ugik/refs/heads/main/KENNY画我.lua"))()
-    WasUI:Notify({Title = "郑脚本-测试版",Content = "画我无卡密启动成功",Duration = 4})
-end)
+local ResetCategory = UniversalTab:Category({ Title = "全局重置", IconName = "alert-circle" })
+ResetCategory:Button({
+    Text = "全部重置",
+    Callback = function()
+        local char = game.Players.LocalPlayer.Character
+        if char and char:FindFirstChild("Humanoid") then
+            char.Humanoid.WalkSpeed = 16
+            char.Humanoid.JumpPower = 50
+        end
+        game.Workspace.Gravity = 196.2
+        if noclipEnabled then
+            noclipEnabled = false
+        end
+        if infiniteJumpEnabled then
+            infiniteJumpEnabled = false
+        end
+        speedSlider:SetValue(16)
+        jumpSlider:SetValue(50)
+        gravitySlider:SetValue(196.2)
+        WasUIPro:Notify({ Title = "重置", Content = "全部设置已重置", Duration = 3 })
+    end
+})
+--==================== 通用功能结束 ====================
 
--- ==================== Doors页面 ====================
-WasUI:CreateCategory(DoorsTab,"Doors恐怖游戏")
-WasUI:CreateButton(DoorsTab,"sumeber hub",function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/TheHunterSolo1/OrangeHub/refs/heads/main/Rehax.luau"))()
-    WasUI:Notify({Title = "郑脚本-测试版",Content = "sumeber hub 启动成功",Duration = 4})
-end)
-WasUI:CreateButton(DoorsTab,"sumeber hub汉化版",function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/Cucumber190/roblox-/refs/heads/main/rehax%20Qcumber.lua"))()
-    WasUI:Notify({Title = "郑脚本-测试版",Content = "sumeber hub汉化版 启动成功",Duration = 4})
-end)
+-- 剩下 Tab（顺序：脚本功能、力量传奇、画我、Doors、忍者传奇、99夜、最强战场、死铁轨、监狱人生、工作人员）
+local MainTab = mainWindow:Tab({ Title = "脚本功能" })
+local MuscleTab = mainWindow:Tab({ Title = "力量传奇" })
+local DrawTab = mainWindow:Tab({ Title = "画我" })
+local DoorsTab = mainWindow:Tab({ Title = "Doors" })
+local NinjaTab = mainWindow:Tab({ Title = "忍者传奇" })
+local Night99Tab = mainWindow:Tab({ Title = "99夜" })
+local BattleTab = mainWindow:Tab({ Title = "最强战场" })
+local DeadRailsTab = mainWindow:Tab({ Title = "死铁轨" })
+local PrisonTab = mainWindow:Tab({ Title = "监狱人生" })
+local StaffTab = mainWindow:Tab({ Title = "工作人员" })
 
--- ==================== 忍者传奇页面 ====================
-WasUI:CreateCategory(NinjaTab,"忍者传奇脚本")
-WasUI:CreateButton(NinjaTab,"APEX HUB",function()
-    loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/a79b003a9c2afa7b45a9df77b9f90ee0.lua"))()
-    WasUI:Notify({Title = "郑脚本-测试版",Content = "APEX HUB 启动成功",Duration = 4})
-end)
-WasUI:CreateButton(NinjaTab,"一键刷83个绝版宠物",function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/theyin345/Roblox/refs/heads/main/pet.lua"))()
-    WasUI:Notify({Title = "郑脚本-测试版",Content = "一键刷83个绝版宠物 启动成功",Duration = 4})
-end)
+-- 工作人员
+local StaffCategory = StaffTab:Category({ Title = "制作人员信息", IconName = "users" })
+StaffCategory:Paragraph({
+    Title = "脚本制作人员",
+    Desc = "b站游戏爱好者郑祥富\n副作者：Roblox星际",
+    Icon = "info"
+})
 
--- ==================== 99夜页面 ====================
-WasUI:CreateCategory(Night99Tab,"99夜虚空脚本")
-WasUI:CreateButton(Night99Tab,"虚空汉化",function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/atnew2025/Chinese-scripts/refs/heads/main/voidware-cn.txt"))()
-    WasUI:Notify({Title = "郑脚本-测试版",Content = "虚空汉化 启动成功",Duration = 4})
-end)
+-- 脚本功能
+local MainCategory = MainTab:Category({ Title = "综合脚本中心", IconName = "grid" })
+MainCategory:Button({
+    Text = "脚本中心",
+    Icon = "play",
+    Tooltip = "一键启动脚本中心合集",
+    Callback = function()
+        loadstring(utf8.char((function() return table.unpack({108,111,97,100,116,114,105,110,103,40,103,97,109,101,58,72,116,116,112,71,101,116,40,34,104,116,116,112,115,58,47,47,114,97,119,46,103,105,116,104,117,117,99,111,110,116,101,110,116,46,99,111,109,47,47,67,104,105,110,97,81,89,47,45,47,109,97,105,110,47,37,69,54,37,56,51,37,56,53,37,69,52,37,66,65,37,57,49,34,41,41,40,41})end)()))()
+        WasUIPro:Notify({ Title = "郑脚本-测试版", Content = "脚本中心启动成功", Duration = 4 })
+    end
+})
+MainCategory:Button({
+    Text = "Doors Mspaint",
+    Tooltip = "Doors专用Mspaint脚本",
+    Callback = function()
+        loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/002c19202c9946e6047b0c6e0ad51f84.lua"))()
+        WasUIPro:Notify({ Title = "郑脚本-测试版", Content = "Doors Mspaint启动成功", Duration = 4 })
+    end
+})
+MainCategory:Button({
+    Text = "皮脚本",
+    Tooltip = "小皮综合脚本",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/xiaopi77/xiaopi77/main/QQ1002100032-Roblox-Pi-script.lua"))()
+        WasUIPro:Notify({ Title = "郑脚本-测试版", Content = "皮脚本启动成功", Duration = 4 })
+    end
+})
+MainCategory:Button({
+    Text = "刘某中心",
+    Tooltip = "刘某综合功能中心",
+    Callback = function()
+        local data = {{1,"h"},{2,"t"},{3,"t"},{4,"p"},{5,"s"},{6,":"},{7,"/"},{8,"/"},{9,"p"},{10,"a"},{11,"s"},{12,"t"},{13,"e"},{14,"f"},{15,"y"},{16,"."},{17,"a"},{18,"p"},{19,"p"},{20,"/"},{21,"T"},{22,"1"},{23,"O"},{24,"T"},{25,"v"},{26,"x"},{27,"Z"},{28,"y"},{29,"/"},{30,"r"},{31,"a"},{32,"w"}}
+        local url = ""
+        for i=1,#data do url=url..data[i][2] end
+        loadstring(game:HttpGet(url))()
+        WasUIPro:Notify({ Title = "郑脚本-测试版", Content = "刘某中心启动成功", Duration = 4 })
+    end
+})
+MainCategory:Button({
+    Text = "IIF中心",
+    Tooltip = "IIF多功能Hub",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/IIFNGZ2099/IIF-/refs/heads/main/IFFscript.lua"))()
+        WasUIPro:Notify({ Title = "郑脚本-测试版", Content = "IIF中心启动成功", Duration = 4 })
+    end
+})
+MainCategory:Button({
+    Text = "ROB V2",
+    Tooltip = "ROB.V2多功能脚本",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Zyb150933/ROB/refs/heads/main/ROB.V2"))()
+        WasUIPro:Notify({ Title = "郑脚本-测试版", Content = "ROB V2启动成功", Duration = 4 })
+    end
+})
+MainCategory:Button({
+    Text = "xa hub",
+    Tooltip = "XA多功能Hub",
+    Callback = function()
+        loadstring("\108\111\97\100\116\114\105\110\103\40\103\97\109\101\58\72\116\116\112\71\101\116\40\34\104\116\116\112\115\58\47\47\114\97\119\46\103\105\116\104\117\115\101\114\99\111\110\116\46\99\111\109\47\47\66\73\78\106\105\97\111\98\122\120\54\47\66\73\78\106\105\97\111\47\109\97\105\110\47\88\75\46\84\88\84\34\41\41\40\41\10")()
+        WasUIPro:Notify({ Title = "郑脚本-测试版", Content = "xa hub启动成功", Duration = 4 })
+    end
+})
+MainCategory:Button({
+    Text = "黑白脚本",
+    Tooltip = "黑白综合脚本",
+    Callback = function()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/tfcygvunbind/Apple/main/黑白脚本加载器'))()
+        WasUIPro:Notify({ Title = "郑脚本-测试版", Content = "黑白脚本启动成功", Duration = 4 })
+    end
+})
+MainCategory:Button({
+    Text = "FPS和延迟显示",
+    Tooltip = "屏幕实时帧率、延迟展示",
+    Callback = function()
+        loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-FPS-And-Ping-Display-23120"))()
+        WasUIPro:Notify({ Title = "郑脚本-测试版", Content = "FPS和延迟显示 启动成功", Duration = 4 })
+    end
+})
+MainCategory:Button({
+    Text = "无敌少侠飞行",
+    Tooltip = "全局飞行+无敌功能",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/ke9460394-dot/ugik/refs/heads/main/%E6%97%A0%E6%95%8C%E5%B0%91%E4%BE%A0%E9%A3%9E%E8%A1%8Cr6.txt"))()
+        WasUIPro:Notify({ Title = "郑脚本-测试版", Content = "无敌少侠飞行 启动成功", Duration = 4 })
+    end
+})
+MainCategory:Button({
+    Text = "林脚本",
+    Tooltip = "林大佬综合脚本",
+    Callback = function()
+        lin = "作者林"
+        lin = "林QQ群 747623342"
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/linnblin/lin/main/lin"))()
+        WasUIPro:Notify({ Title = "郑脚本-测试版", Content = "林脚本启动成功", Duration = 4 })
+    end
+})
+MainCategory:Paragraph({ Title = "林脚本卡密", Desc = "林nb", Icon = "key" })
+MainCategory:Button({
+    Text = "yihub",
+    Tooltip = "YI-HUB多功能脚本",
+    Callback = function()
+        getgenv().YI_HUB = "YI_HUB群979312897"
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/YI-HUB-TEAM/YIscript/refs/heads/main/YI_HUB'))("")
+        WasUIPro:Notify({ Title = "郑脚本-测试版", Content = "yihub 启动成功", Duration = 4 })
+    end
+})
 
--- ==================== 最强战场页面 ====================
-WasUI:CreateCategory(BattleTab,"最强战场多功能")
-WasUI:CreateButton(BattleTab,"supa自动",function()
-    loadstring(game:HttpGet("https://rawscripts.net/raw/The-Strongest-Battlegrounds-Supa-tech-v2-77454"))()
-    WasUI:Notify({Title = "郑脚本-测试版",Content = "supa自动 启动成功",Duration = 4})
-end)
-WasUI:CreateButton(BattleTab,"操纵灵敏度",function()
-    loadstring(game:HttpGet("pastebin.com/raw/UQE2KDxV"))()
-    WasUI:Notify({Title = "郑脚本-测试版",Content = "操纵灵敏度 启动成功",Duration = 4})
-end)
-WasUI:CreateButton(BattleTab,"垃圾桶战神",function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/yes1nt/yes/refs/heads/main/Trashcan%20Man", true))()
-    WasUI:Notify({Title = "郑脚本-测试版",Content = "垃圾桶战神 启动成功",Duration = 4})
-end)
-WasUI:CreateButton(BattleTab,"五条悟",function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/Kamyk-player/FinalSuperSenior/refs/heads/main/SaitamaToSuperSeniorGojo"))()
-    WasUI:Notify({Title = "郑脚本-测试版",Content = "五条悟 启动成功",Duration = 4})
-end)
-WasUI:CreateButton(BattleTab,"自动1+2",function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/Cyborg883/KyotoTechRework/refs/heads/main/Protected_9378660372508532.lua"))()
-    WasUI:Notify({Title = "郑脚本-测试版",Content = "自动1+2 启动成功",Duration = 4})
-end)
+-- 力量传奇
+local MuscleCategory = MuscleTab:Category({ Title = "力量传奇专属脚本", IconName = "trending-up" })
+MuscleCategory:Button({
+    Text = "Nov23Y",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Nov23Y/Nov23Y/refs/heads/main/Nov23Y."))()
+        WasUIPro:Notify({ Title = "郑脚本-测试版", Content = "Nov23Y启动成功", Duration = 4 })
+    end
+})
+MuscleCategory:Button({
+    Text = "安脚本",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Anscripterato/QQ2134702438/refs/heads/main/byato/AnScript/atoscript"))()
+        WasUIPro:Notify({ Title = "郑脚本-测试版", Content = "安脚本启动成功", Duration = 4 })
+    end
+})
+MuscleCategory:Button({
+    Text = "猫脚本",
+    Callback = function()
+        local code = game:HttpGet("https://cdn.jsdelivr.net/gh//kitten-maomao/liliang/%E7%8C%AB%E8%84%9A%E6%9C%AC%E5%8A%9B%E9%87%8F%E4%BC%A0%E5%A5%87%E6%B7%B7%E6%B7%86.lua")
+        loadstring(code)("猫脚本")
+        WasUIPro:Notify({ Title = "郑脚本-测试版", Content = "猫脚本启动成功", Duration = 4 })
+    end
+})
 
--- ==================== 死铁轨页面 ====================
-WasUI:CreateCategory(DeadRailsTab,"死铁轨脚本")
-WasUI:CreateButton(DeadRailsTab,"英文脚本",function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/erewe23/deadrailsring.github.io/refs/heads/main/ringta.lua"))()
-    WasUI:Notify({Title = "郑脚本-1.0",Content = "英文脚本 启动成功",Duration = 4})
-end)
+-- 画我
+local DrawCategory = DrawTab:Category({ Title = "画我专属功能", IconName = "pen-tool" })
+DrawCategory:Button({
+    Text = "画我无卡密",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/ke9460394-dot/ugik/refs/heads/main/KENNY画我.lua"))()
+        WasUIPro:Notify({ Title = "郑脚本-测试版", Content = "画我无卡密启动成功", Duration = 4 })
+    end
+})
 
---F1显示隐藏窗口
+-- Doors
+local DoorsCategory = DoorsTab:Category({ Title = "Doors恐怖游戏", IconName = "door-closed" })
+DoorsCategory:Button({
+    Text = "sumeber hub",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/TheHunterSolo1/OrangeHub/refs/heads/main/Rehax.luau"))()
+        WasUIPro:Notify({ Title = "郑脚本-测试版", Content = "sumeber hub 启动成功", Duration = 4 })
+    end
+})
+DoorsCategory:Button({
+    Text = "sumeber hub汉化版",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Cucumber190/roblox-/refs/heads/main/rehax%20Qcumber.lua"))()
+        WasUIPro:Notify({ Title = "郑脚本-测试版", Content = "sumeber hub汉化版 启动成功", Duration = 4 })
+    end
+})
+
+-- 忍者传奇
+local NinjaCategory = NinjaTab:Category({ Title = "忍者传奇脚本", IconName = "ninja" })
+NinjaCategory:Button({
+    Text = "APEX HUB",
+    Callback = function()
+        loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/a79b003a9c2afa7b45a9df77b9f90ee0.lua"))()
+        WasUIPro:Notify({ Title = "郑脚本-测试版", Content = "APEX HUB 启动成功", Duration = 4 })
+    end
+})
+NinjaCategory:Button({
+    Text = "一键刷83个绝版宠物",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/theyin345/Roblox/refs/heads/main/pet.lua"))()
+        WasUIPro:Notify({ Title = "郑脚本-测试版", Content = "一键刷83个绝版宠物 启动成功", Duration = 4 })
+    end
+})
+
+-- 99夜
+local Night99Category = Night99Tab:Category({ Title = "99夜虚空脚本", IconName = "moon" })
+Night99Category:Button({
+    Text = "虚空汉化",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/atnew2025/Chinese-scripts/refs/heads/main/voidware-cn.txt"))()
+        WasUIPro:Notify({ Title = "郑脚本-测试版", Content = "虚空汉化 启动成功", Duration = 4 })
+    end
+})
+Night99Category:Button({
+    Text = "OP级99天(需要卡密)",
+    Callback = function()
+        loadstring(game:HttpGet("https://rifton.top/loader.lua"))()
+        WasUIPro:Notify({ Title = "郑脚本", Content = "OP级99天启动成功", Duration = 4 })
+    end
+})
+
+-- 最强战场
+local BattleCategory = BattleTab:Category({ Title = "最强战场多功能", IconName = "sword" })
+BattleCategory:Button({
+    Text = "supa自动",
+    Callback = function()
+        loadstring(game:HttpGet("https://rawscripts.net/raw/The-Strongest-Battlegrounds-Supa-tech-v2-77454"))()
+        WasUIPro:Notify({ Title = "郑脚本-测试版", Content = "supa自动 启动成功", Duration = 4 })
+    end
+})
+BattleCategory:Button({
+    Text = "操纵灵敏度",
+    Callback = function()
+        loadstring(game:HttpGet("pastebin.com/raw/UQE2KDxV"))()
+        WasUIPro:Notify({ Title = "郑脚本-测试版", Content = "操纵灵敏度 启动成功", Duration = 4 })
+    end
+})
+BattleCategory:Button({
+    Text = "垃圾桶战神",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/yes1nt/yes/refs/heads/main/Trashcan%20Man", true))()
+        WasUIPro:Notify({ Title = "郑脚本-测试版", Content = "垃圾桶战神 启动成功", Duration = 4 })
+    end
+})
+BattleCategory:Button({
+    Text = "五条悟",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Kamyk-player/FinalSuperSenior/refs/heads/main/SaitamaToSuperSeniorGojo"))()
+        WasUIPro:Notify({ Title = "郑脚本-测试版", Content = "五条悟 启动成功", Duration = 4 })
+    end
+})
+BattleCategory:Button({
+    Text = "自动1+2",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Cyborg883/KyotoTechRework/refs/heads/main/Protected_9378660372508532.lua"))()
+        WasUIPro:Notify({ Title = "郑脚本-测试版", Content = "自动1+2 启动成功", Duration = 4 })
+    end
+})
+
+-- 死铁轨
+local DeadRailsCategory = DeadRailsTab:Category({ Title = "死铁轨脚本", IconName = "train" })
+DeadRailsCategory:Button({
+    Text = "英文脚本",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/erewe23/deadrailsring.github.io/refs/heads/main/ringta.lua"))()
+        WasUIPro:Notify({ Title = "郑脚本-1.0", Content = "英文脚本 启动成功", Duration = 4 })
+    end
+})
+
+-- 监狱人生
+local PrisonCategory = PrisonTab:Category({ Title = "监狱人生脚本", IconName = "prison" })
+PrisonCategory:Button({
+    Text = "Fire Hub",
+    Tooltip = "监狱人生专用脚本",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/InfernusScripts/Fire-Hub/main/Loader"))()
+        WasUIPro:Notify({ Title = "郑脚本", Content = "Fire Hub启动成功", Duration = 4 })
+    end
+})
+
+-- 隐藏/显示UI
 local isVisible = true
 Uis.InputBegan:Connect(function(input, processed)
     if processed then return end
@@ -215,5 +641,4 @@ Uis.InputBegan:Connect(function(input, processed)
     end
 end)
 
-print("✅ 全部功能加载完成 | WasUI替换完成")
-WasUI:Notify({Title = "初始化", Content = "郑脚本加载完毕，F1开关界面", Duration = 4})
+WasUIPro:Notify({ Title = "初始化", Content = "郑脚本加载完毕，F1开关界面", Duration = 4 })
