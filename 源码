@@ -1,1 +1,644 @@
---[[ v1.0.0 https://wearedevs.net/obfuscator ]] return(function(...)local v={"\099\071\052\102\113\069\105\111\099\075\068\043\097\073\103\043\109\085\103\104\119\122\051\067\070\054\120\116\075\076\117\102\079\104\055\112\069\065\107\075\076\055\077\088\109\065\085\110\043\069\107\049\057\098\107\118\106\051\105\081\113\100\114\118\052\068\089\051\119\050\116\116\082\072\050\087\082\048\075\067\088\067\047\047\105\088\081\074\066\104\102\100\087\121\071\115\084\098\069\071\070\097\097\117\053\081\048\081\051\117\090\061","\108\102\078\078\109\090\061\061";"\043\102\105\078\088\086\050\073","\109\106\082\068\055\100\043\051";"\083\107\071\107\050\106\082\098\088\102\082\099\043\049\043\054\088\115\119\061";"\098\110\043\069\056\105\119\103\043\115\043\068\084\052\052\056\055\102\089\061";"\043\106\103\067\055\100\074\061";"\089\097\083\047\084\049\109\116\072\115\051\067\121\102\065\079\050\120\061\061";"\110\105\080\048\043\112\076\061";"\055\086\080\078\043\115\050\116\109\106\051\099\043\047\061\061";"\055\049\074\061","\088\086\052\104\055\086\053\061","\109\100\083\079\098\112\111\107","\043\110\054\079\055\100\074\061","\109\116\088\098\050\082\043\089\055\090\061\061";"\110\105\080\068\043\110\083\078\088\086\052\104\055\086\053\061";"\122\115\083\116\109\057\088\051\088\120\061\061","\072\090\061\061","\121\100\120\079\108\056\052\119\043\052\052\076\056\106\105\072","\088\086\080\085\088\115\054\113\055\106\109\061","\055\112\052\116\098\120\061\061";"\082\086\052\068\109\086\082\079\074\057\083\051\088\086\082\097\088\086\082\119\074\089\061\061";"";"\109\086\050\078\055\086\047\061";"\082\097\108\061";"\084\107\113\108\112\097\108\085\050\116\083\057\108\105\052\108\043\120\061\061","\109\102\082\116\055\112\082\116\108\110\083\078\108\106\103\051","\055\086\082\099";"\043\100\050\105\108\090\061\061";"\108\102\080\099\108\102\052\116","\043\053\054\081\053\056\083\106\053\102\052\097\072\056\121\076\084\120\061\061";"\088\086\080\099\088\112\105\104\043\110\074\061","\109\102\103\106\098\106\043\098\082\052\054\085\083\119\113\098\050\120\061\061";"\088\110\071\111\121\105\083\070\098\116\113\097\088\116\052\113\053\047\061\061","\053\082\043\117\098\102\113\101\043\100\082\105\082\086\047\116\082\115\119\061";"\072\104\090\051\043\069\073\113\072\090\061\061";"\121\051\054\073\050\116\105\054\098\107\050\069";"\088\112\111\047\108\112\050\087","\110\105\080\113\055\106\083\051\084\120\061\061";"\043\102\052\068\043\089\061\061";"\112\056\082\101\083\086\113\054\088\086\113\074\082\100\054\106\050\047\061\061","\053\097\071\100\053\086\043\110\098\053\083\116\050\051\082\107\098\120\061\061";"\055\049\057\061","\110\105\080\107\108\047\061\061";"\109\106\052\099\043\086\080\068","\108\107\051\116\043\089\061\061";"\083\085\054\101\098\110\054\085\056\051\043\111\053\102\083\113"}for T,S in ipairs({{456087+-456086,-579296-(-579343)};{76621-76620;984252+-984221};{-287747+287779,-1043000+1043047}})do while S[939736-939735]<S[-640572+640574]do v[S[-23553+23554]],v[S[892771+-892769]],S[738563+-738562],S[774456-774454]=v[S[530791-530789]],v[S[-725602-(-725603)]],S[-371204-(-371205)]+(-767609-(-767610)),S[-784050+784052]-(-56231+56232)end end local function T(T)return v[T+(31598-(-7581))]end do local T=v local S=math.floor local w={l=890019-889995,y=324819+-324807,k=-1035386-(-1035425),Z=-493489+493521,q=611005+-610964;["\056"]=-202727+202746;z=220666+-220648,N=328855+-328822;w=639055+-639019,o=627058+-627001,j=-773466-(-773504),U=-364671+364722,S=954539+-954522;A=1034976-1034916,R=-706357+706378;["\054"]=-545481+545490;a=426420+-426385,["\053"]=-801924+801944,M=756040-755981;i=114453-114400,["\049"]=348611+-348608;X=581448-581419;O=-592109+592159,Y=-228962-(-228978),K=372389-372378;D=493940+-493895;v=1014266+-1014204;["\047"]=-209239-(-209287),b=-225886+225912,r=754348+-754317,F=153013-153003,u=153451-153393,f=367381-367327;J=184602+-184594,L=298291+-298235;E=117082-117080,t=853285+-853233,C=909705+-909658;H=534921+-534907,["\043"]=-9376-(-9401);e=-818767+818782;["\057"]=603581-603577;["\048"]=-353761+353805;T=437643-437613,c=-668152+668198;B=82225-82162;["\050"]=344019+-344006,V=154139+-154133;G=1014686-1014685;h=1044274+-1044240,x=-97467+97467,d=983136-983081;s=-713489-(-713496),p=870302-870280;["\055"]=249225-249198;n=-290629-(-290652);I=-811483+811523,W=-1613-(-1656),Q=472113+-472071;m=355246+-355218,["\051"]=-995484-(-995521);["\052"]=612756-612751,P=-363980-(-364041);g=576991-576942}local c=table.insert local K=type local k=string.char local u=string.len local o=string.sub local x=table.concat for v=606766-606765,#T,-495785+495786 do local n=T[v]if K(n)=="\115\116\114\105\110\103"then local K=u(n)local O={}local z=65954+-65953 local V=-760615+760615 local Y=-774059+774059 while z<=K do local v=o(n,z,z)local T=w[v]if T then V=V+T*(655791+-655727)^((547227+-547224)-Y)Y=Y+(506723+-506722)if Y==826540+-826536 then Y=76974+-76974 local v=S(V/(-905022+970558))local T=S((V%(-156474-(-222010)))/(222387-222131))local w=V%(508897+-508641)c(O,k(v,T,w))V=-859239-(-859239)end elseif v=="\061"then c(O,k(S(V/(954468+-888932))))if z>=K or o(n,z+(834219+-834218),z+(800754-800753))~="\061"then c(O,k(S((V%(-291645-(-357181)))/(698231+-697975))))end break end z=z+(72420-72419)end T[v]=x(O)end end end return(function(v,w,c,K,k,u,o,X,x,Y,z,p,N,i,O,V,D,n,h,B,S)S,X,O,D,V,i,z,x,n,p,B,h,N,Y=function(S,c,K,k)local I,o,y,l,a,t,d,n,F,j,Z,G,r,X,H,z,E,U,V,g,b,L,A,Y,Q,R,P,f,q,W,C,M,s,J while S do if S<5461236-(-770834)then if S<2597831-(-358017)then if S<556743+1587894 then if S<840349-(-857175)then if S<1395772-(-14366)then if S<1049085-621992 then if S<487993+-299908 then C=489943-489942 S=13856845-(-473701)M=l[C]t=M else V=T(132886+-172022)z=v[V]V=T(1006798-1045942)S=v[T(-754771-(-715629))]n=z[V]V=x[K[-559467-(-559468)]]z={n(V)}o={w(z)}end else o=589694+9388620 z=T(208771+-247904)V=86865+6086697 n=z^V S=o-n n=S o=T(-274575+235405)S=o/n o={S}S=v[T(259517+-298660)]end else if S<1418974-(-184114)then z=x[K[-287203-(-287205)]]V=x[K[55437+-55434]]n=z==V o=n S=-874735+4669016 else S={}n=S z=594633-594632 V=x[K[985488+-985479]]Y=V V=655040+-655039 X=V V=-999235-(-999235)F=X<V V=z-X S=3499853-701876 end end else if S<15045+1719415 then if S<2110507-403674 then S=896438+1393741 x[z]=o else n=nil S=-884675+7720511 x[K[493978+-493973]]=o end else if S<-768133+2658698 then x[z]=Z S=x[z]S=S and 195964+4391396 or-178916+3247802 else z=x[K[-879843+879845]]V=423730+-423573 n=z*V z=726430+5358305408033 o=n+z n=-372259+35184372461091 S=o%n x[K[686418-686416]]=S n=x[K[239608-239605]]S=526144+5530580 z=412664+-412663 o=n~=z end end end else if S<2596602-294740 then if S<2745139-461495 then if S<-635657+2907812 then if S<2785709-548705 then S=M o=t S=-421312+2125443 else R=T(-431597+392422)S=v[R]s=T(-128923+89771)r=v[s]R=S(r)S=T(-295066-(-255929))v[S]=R S=13784304-284821 end else o={}S=v[T(-546135-(-506987))]end else if S<-592979+2882985 then S=6092409-(-695481)else q=N(q)l=nil s=N(s)A=N(A)g=N(g)j=N(j)J=N(J)S=-943764+5466047 end end else if S<3627226-869231 then if S<620678+1689389 then S=h(-143767+10359318,{Y})P={S()}S=v[T(197652+-236816)]o={w(P)}else r=21351-21351 H=#Q E=H==r S=E and 10379880-(-908439)or 4752698-(-284661)end else if S<3478903-594786 then d=not F V=V+X z=V<=Y z=d and z d=V>=Y d=F and d z=d or z d=2929700-(-185102)S=z and d z=-943696+4022934 S=S or z else S=true S=S and-823055+6927382 or 13319745-895212 end end end end else if S<4815218-413548 then if S<3382528-(-342781)then if S<3206122-115984 then if S<-237478+3315381 then if S<-802464+3801015 then F=x[X]o=F S=-937348+4861093 else S=true S=836980+1472818 end else S=x[K[-433944+433954]]z=x[K[322948-322937]]n[S]=z S=x[K[-205156+205168]]z={S(n)}o={w(z)}S=v[T(209915-249068)]end else if S<-168441+3688976 then I=-918917+919172 S=x[K[519869+-519868]]U=-558356+558356 d=S(U,I)z=V S=2928006-130029 n[z]=d z=nil else M=x[z]t=M S=M and-618248-(-694391)or 15378644-1048098 end end else if S<5035179-987749 then if S<371808+3444152 then S=o and 147356+9160617 or-184869+7020705 else d=T(-141543-(-102369))F=o o=v[d]U=T(976478-1015614)d=T(-203732-(-164582))S=o[d]d=O()b=T(-828837-(-789701))x[d]=S o=v[U]U=T(-288695+249530)S=o[U]L=S G=v[b]U=S I=G S=G and-233847+4438536 or 8859851-702101 end else if S<-265168+4474688 then Q=T(107993-147129)b=v[Q]Q=T(-401877+362720)S=7537356-(-620394)G=b[Q]I=G else V=x[K[197121-197115]]S=138552+1574687 z=V==n o=z end end end else if S<41793+5850051 then if S<508306+4217446 then if S<-124639+4659455 then if S<4061343-(-459282)then y=524113+-524112 a=l[y]M=S y=false C=a==y S=C and 641882+10718336 or 1276852-(-957017)t=C else Z=Z+R s=not r o=Z<=P o=s and o s=Z>=P s=r and s o=s or o s=5562118-771168 S=o and s o=13273181-(-381000)S=S or o end else S=15018636-(-953576)end else if S<-366624+5228677 then j=T(-552406-(-513232))s=O()x[s]=Z o=v[j]j=T(616778+-655928)S=o[j]j=954123-954122 q=-720462+720562 o=S(j,q)j=O()x[j]=o g=-1021650-(-1021651)C=T(45794+-84969)S=x[d]A=93333-93078 q=-796304-(-796304)W=-1046959+1046959 o=S(q,A)q=O()x[q]=o A=-471810+471811 S=x[d]J=x[j]o=S(A,J)l=231024+-231022 A=O()x[A]=o o=x[d]J=o(g,l)o=-268659-(-268660)S=J==o l=T(-306998+267821)J=O()x[J]=S o=T(-394652-(-355493))M=v[C]a=x[d]f=-130277+140277 S=T(-419358+380192)y={a(W,f)}C=M(w(y))S=E[S]M=T(-157290+118113)t=C..M g=l..t S=S(E,o,g)g=O()l=T(-877942+838771)x[g]=S t=D(10087134-113266,{d,s;L;V;z,H,J,g,j;A;q,I})o=v[l]l={o(t)}S={w(l)}l=S S=x[J]S=S and 9267203-151932 or 987377+2633201 else H=949343+-949342 r=#Q E=Y(H,r)q=162587+-162586 H=F(Q,E)r=x[b]j=H-q E=nil s=d(j)r[H]=s H=nil S=3088035-634998 end end else if S<392284+5707312 then if S<122652+5934212 then V=-484480-(-484581)z=x[K[223150-223147]]n=z*V z=-563984+564241 o=n%z x[K[-623619-(-623622)]]=o S=-574525+8082944 else S=13988992-(-481626)R=T(-431497+392362)P=v[R]U=L R=T(647711-686860)Z=P[R]P=Z(n,U)Z=x[K[73147+-73141]]R=Z()H=P+R E=H+F H=-573056+573312 U=nil R=39147+-39146 Q=E%H H=V[z]F=Q P=F+R Z=Y[P]E=H..Z V[z]=E end else if S<58112+6049118 then o=T(-522132-(-482995))S=v[o]n=T(-595964+556812)o=v[n]n=T(-406870+367718)v[n]=S n=T(-686168+647031)v[n]=o n=x[K[-471266-(-471267)]]S=888260+2032224 z=n()else S=15326337-(-108329)end end end end end else if S<10869082-677263 then if S<8217480-439648 then if S<266025+6746474 then if S<6918137-142569 then if S<463538+6273617 then if S<5908291-(-599237)then P=G==b S=10539+1778843 Z=P else q=not j H=H+s E=H<=r E=q and E q=H>=r q=j and q E=q or E q=1037143+6645585 S=E and q E=8992368-(-133266)S=S or E end else o=461514+1842688 V=-517925-(-645357)z=T(-138508-(-99350))n=z^V S=o-n n=S o=T(665240-704401)S=o/n o={S}S=v[T(977353-1016493)]end else if S<7364123-539027 then S=v[T(-743415+704261)]o={z}else S=x[K[-560092+560099]]S=S and-560221+13942564 or 1583819-(-57846)end end else if S<8099546-731292 then if S<8096865-880613 then r=T(600368-639505)S=v[r]r=T(530262+-569414)v[r]=S S=12737234-(-762249)else d=nil S=5030+6782860 Y=nil F=nil end else if S<-393379+8059350 then z=x[K[478394-478391]]V=427576-427575 n=z~=V S=n and 17427352-869921 or 6771865-715141 else E=H S=-879127+7559366 q=E Q[E]=q E=nil end end end else if S<9683674-592440 then if S<8225394-(-406484)then if S<774489+7410298 then if S<7077425-(-1015547)then n=x[K[-396643-(-396644)]]o=#n n=-334966-(-334966)S=o==n S=S and-549884+2478448 or-479151+905642 else S=L S=I and 8421593-(-356961)or 7620558-(-1031492)o=I end else S=true V=T(-281628-(-242493))Y=O()d=T(-909766+870595)z=O()n=c x[z]=S o=v[V]V=T(594941-634086)S=o[V]V=O()x[V]=S S=p(1012796+9933332,{})X=O()U=D(90306+10942963,{X})x[Y]=S S=false x[X]=S F=v[d]d=F(U)o=d S=d and 318788+2659784 or 4853943-930198 end else if S<8450786-(-270564)then L=T(519379+-558536)I=v[L]o=I S=8384678-(-393876)else Q=T(336150+-375321)L=-804823-(-804826)G=673403-673338 E=D(1832394-1003954,{})I=O()x[I]=o S=x[d]o=S(L,G)L=O()x[L]=o o=v[Q]S=350938-350938 Q={o(E)}G=S o=-1048158+1048160 S=-293970-(-293970)b=S S={w(Q)}Q=S S=Q[o]R=T(309240+-348415)o=T(-49276+10113)E=S S=v[o]H=x[V]P=v[R]R=P(E)P=T(-39708-(-549))Z=H(R,P)H={Z()}o=S(w(H))H=O()x[H]=o o=395409+-395408 Z=x[L]S=819794+3702489 P=Z Z=426851+-426850 R=Z Z=755587+-755587 r=R<Z Z=o-R end end else if S<-446851+9665235 then if S<-299785+9424779 then t=x[z]o=t S=t and-48869+4569301 or-293368+1997499 else r=-896950-(-896950)S=-922439+5959798 H=#Q E=H==r end else if S<8796743-(-790136)then I=i(-753616+7526469,{})o=T(-923477+884314)Y=T(-765680-(-726505))S=v[o]U=T(968076+-1007247)n=x[K[882824-882820]]V=v[Y]d=v[U]U={d(I)}F={w(U)}d=-65953-(-65955)X=F[d]Y=V(X)V=T(255548-294707)z=n(Y,V)n={z()}o=S(w(n))n=o z=x[K[405534+-405529]]o=z S=z and 3816618-(-413272)or-940513+2653752 else z=x[K[-35555-(-35556)]]Y=58666+-58665 X=-852329-(-852331)V=z(Y,X)z=16274-16273 n=V==z S=n and 4205765-411484 or 1216783-(-359614)o=n end end end end else if S<12474210-(-649405)then if S<10725238-(-616318)then if S<132130+10888860 then if S<68334+10831929 then if S<11170985-690837 then S=15506+2904978 else r=995776-995770 R=519153-519152 S=x[d]P=S(R,r)S=T(-239313+200176)r=T(692779+-731916)v[S]=P R=v[r]r=163720-163718 S=R>r S=S and 3076213-817831 or 7610968-403368 end else o=T(-821621-(-782487))n=T(837207-876380)S=v[o]o=S(n)S=v[T(-239568+200408)]o={}end else if S<584869+10626257 then o={}S=true x[K[-272081-(-272082)]]=S S=v[T(536873-576049)]else Q=nil H=O()s=O()q={}G=nil r=h(-998647+8980486,{H;I,L,X})X=N(X)Y=nil E={}C=nil U=nil x[H]=E E=O()x[E]=r j=T(-1007486-(-968318))F=nil l=T(1004638+-1043770)J=T(-87354+48198)r={}x[s]=r r=v[j]g=x[s]A={[J]=g,[l]=C}j=r(q,A)S=v[T(-751436-(-712267))]z=j d=nil r=B(12124166-(-262411),{s,H,b;I;L;E})I=N(I)E=N(E)V=r H=N(H)b=N(b)o={}L=N(L)s=N(s)G=27603147757124-(-515057)X=T(-676356-(-637218))L=T(-677499+638352)Y=v[X]d=T(762663-801818)F=v[d]I=V(L,G)U=z[I]I=T(381765+-420943)I=F[I]z=nil d={I(F,U)}X=Y(w(d))V=nil Y=X()end end else if S<311433+11872586 then if S<11948375-519895 then y=800191+-800189 a=l[y]S=2600592-366723 y=x[g]C=a==y t=C else S=true S=S and 5427723-(-720401)or 812489+1497309 end else if S<12198408-(-218593)then n=c[-176440-(-176441)]z=c[-735054-(-735056)]S=x[K[4057-4056]]V=S S=V[z]S=S and 2370818-81218 or 13736930-28484 else S=v[T(177283+-216445)]o={}end end end else if S<15313112-861314 then if S<13359470-(-296069)then if S<1026682+12596558 then if S<13320163-(-171344)then n=T(-147194+108060)S=v[n]z=x[K[-19747+19755]]V=502735-502735 n=S(z,V)S=-93054+1734719 else S=691804+14742862 end else P=x[z]S=P and-1001267+7465027 or 116208+1673174 Z=P end else if S<313812+13971205 then X=-64656+35184372153488 S={}d=663260+-663005 L=-338654+338655 x[K[780255+-780253]]=S o=x[K[921650-921647]]U=T(-495448-(-456313))Y=o o=z%X x[K[525421-525417]]=o F=z%d d=281394+-281392 X=F+d x[K[603906+-603901]]=X d=v[U]U=T(327423+-366590)F=d[U]d=F(n)U=201426-201425 G=L L=655829-655829 F=T(1004072-1043244)V[z]=F F=565941-565868 b=G<L L=U-G S=15091893-621275 I=d else x[z]=t y=x[A]W=-287573+287574 a=y+W C=l[a]M=G+C C=228112-227856 S=M%C a=x[q]C=b+a G=S S=-444927+2735106 a=-336154+336410 M=C%a b=M end end else if S<15153430-(-344636)then if S<639311+14223779 then L=L+G U=L<=I Q=not b U=Q and U Q=L>=I Q=b and Q U=Q or U Q=-800638+6857502 S=U and Q U=-1015374+8342334 S=S or U else S=true S=S and 9512217-(-987200)or 2726518-452311 end else if S<-666784+16701797 then I=N(I)z=N(z)G=nil Q=nil G={}d=N(d)d=T(-1019434-(-980260))z=nil Q={}Y=N(Y)H=N(H)V=N(V)L=N(L)U=nil V=nil H=-618164-(-618420)E=nil X=N(X)F=nil F=T(-997108-(-957934))X=v[F]L=O()b=nil F=T(-621371-(-582230))U=T(-266074+226938)b=O()Y=X[F]I=T(-299327+260192)X=O()x[X]=Y F=v[d]S=-429171+7109410 d=T(267337-306487)Y=F[d]d=v[U]r=H U=T(974483-1013627)E=-336455-(-336456)F=d[U]H=-438310+438311 U=v[I]I=T(-198272-(-159126))d=U[I]U=523533-523533 I=O()x[I]=U U=-989458-(-989460)s=H x[L]=U U={}x[b]=G H=173223+-173223 G=613449+-613449 j=s<H H=E-s else V=774779+-774747 S=-321116-(-747607)z=x[K[636863-636860]]n=z%V Y=x[K[-496854-(-496858)]]I=-30811+30813 d=x[K[-63021-(-63023)]]G=-709363-(-709376)E=x[K[-539843-(-539846)]]Q=E-n E=-475091-(-475123)b=Q/E L=G-b U=I^L F=d/U X=Y(F)Y=4294825436-(-141860)V=X%Y X=42250-42248 U=37058+-37057 Y=X^n z=V/Y Y=x[K[735560-735556]]d=z%U U=907612+4294059684 F=d*U X=Y(F)Y=x[K[-574606+574610]]I=-807954-(-808210)F=Y(z)V=X+F X=737707-672171 z=nil G=749836+-749580 Y=V%X F=V-Y d=-445738+511274 X=F/d d=190492-190236 V=nil F=Y%d U=Y-F d=U/I I=380739-380483 U=X%I L=X-U X=nil I=L/G n=nil Y=nil L={F,d,U,I}U=nil x[K[238961-238960]]=L d=nil F=nil I=nil end end end end end end end S=#k return w(o)end,function(v,T)local w=V(T)local c=function(...)return S(v,{...},T,w)end return c end,function()z=(60122+-60121)+z n[z]=710030-710029 return z end,function(v,T)local w=V(T)local c=function(c,K)return S(v,{c,K},T,w)end return c end,function(v)for T=302915+-302914,#v,-291265-(-291266)do n[v[T]]=n[v[T]]+(-285454-(-285455))end if c then local S=c(true)local w=k(S)w[T(-46828+7672)],w[T(-273629+234478)],w[T(-799464+760325)]=v,Y,function()return 3436455-(-626473)end return S else return K({},{[T(734878-774029)]=Y;[T(-169049-(-129893))]=v,[T(-631243-(-592104))]=function()return-1003883+5066811 end})end end,function(v,T)local w=V(T)local c=function(c)return S(v,{c},T,w)end return c end,954344+-954344,{},{},function(v,T)local w=V(T)local c=function(c,K,k,u,o)return S(v,{c;K,k,u,o},T,w)end return c end,function(v,T)local w=V(T)local c=function(c,K,k,u,o,x,n)return S(v,{c,K,k,u,o,x;n},T,w)end return c end,function(v,T)local w=V(T)local c=function(c,K,k,u)return S(v,{c;K,k;u},T,w)end return c end,function(v)n[v]=n[v]-(478297-478296)if 1046878+-1046878==n[v]then n[v],x[v]=nil,nil end end,function(v)local T,S=-1028464-(-1028465),v[-699686-(-699687)]while S do n[S],T=n[S]-(-1027163-(-1027164)),T+(-71999-(-72000))if n[S]==-242176-(-242176)then n[S],x[S]=nil,nil end S=v[T]end end return(X(299170+7888430,{}))(w(o))end)(getfenv and getfenv()or _ENV,unpack or table[T(-281956-(-242799))],newproxy,setmetatable,getmetatable,select,{...})end)(...)
+local WasUIPro = loadstring(game:HttpGet("https://raw.githubusercontent.com/WasKKal/WasUI-For-Roblox/main/WasUIPro.lua", true))()
+local Uis = game:GetService("UserInputService")
+local Players = game:GetService("Players")
+
+WasUIPro:SetDefaultTheme("Dark")
+WasUIPro:SetDefaultRainbowMode("流动")
+WasUIPro:SetLanguage("中文")
+
+local mainWindow = WasUIPro:CreateWindow({
+    Title = "郑脚本 | 主作者：游戏爱好者郑祥富 副作者：ROBLOX星际",
+    WelcomeText = "欢迎使用郑脚本-1.0",
+    MinimizedText = "郑脚本",
+    Theme = "Dark",
+    RainbowMode = "流动",
+    DialogTitle = "确认关闭郑脚本?",
+    GroupText = "郑脚本交流群",
+    GroupCopy = "107370.1191",
+    SnowEnabled = false,
+    Folder = "ZhengScript",
+    TitleTag = {
+        { text = "Ver1.0", backgroundColor = Color3.fromRGB(0,152,211), textColor = Color3.fromRGB(255,255,255) },
+        { text = "郑脚本", backgroundColor = Color3.fromRGB(255,80,80), textColor = Color3.fromRGB(255,255,255) }
+    }
+})
+
+task.spawn(function()
+    task.wait(0.5)
+    WasUIPro:Popup({
+        title = "欢迎使用郑脚本",
+        titleIcon = "sparkles",
+        content = "作者：b站游戏爱好者郑祥富\n副作者：Roblox星际\nF1隐藏/显示UI",
+        confirmText = "知道了",
+        cancelText = "关闭弹窗",
+        onConfirm = function() end
+    })
+end)
+
+--==================== 通用功能（第一个Tab，立刻写内容）====================
+local UniversalTab = mainWindow:Tab({ Title = "通用功能" })
+local UniversalCategory = UniversalTab:Category({ Title = "移动速度修改", IconName = "gauge" })
+
+local speedSlider
+speedSlider = UniversalCategory:Slider({
+    Title = "移速滑块",
+    Min = 0,
+    Max = 250,
+    Default = 16,
+    Callback = function(value)
+        local char = game.Players.LocalPlayer.Character
+        if char and char:FindFirstChild("Humanoid") then
+            char.Humanoid.WalkSpeed = value
+            WasUIPro:Notify({ Title = "移动速度", Content = "已设置为: " .. value, Duration = 1 })
+        end
+    end
+})
+UniversalCategory:TextInput({
+    Title = "移速数值",
+    Placeholder = "请输入移速倍数(默认16)",
+    Callback = function(value)
+        local num = tonumber(value)
+        if num and game.Players.LocalPlayer and game.Players.LocalPlayer.Character then
+            local char = game.Players.LocalPlayer.Character
+            local hrp = char:FindFirstChild("HumanoidRootPart")
+            local hum = char:FindFirstChild("Humanoid")
+            if hrp and hum then
+                hrp.Velocity = hrp.Velocity.Unit * num
+                hum.WalkSpeed = num
+                WasUIPro:Notify({ Title = "移动速度", Content = "已设置为: " .. num, Duration = 2 })
+            end
+        end
+    end
+})
+UniversalCategory:Button({
+    Text = "重置移速(16)",
+    Callback = function()
+        local char = game.Players.LocalPlayer.Character
+        if char and char:FindFirstChild("Humanoid") then
+            char.Humanoid.WalkSpeed = 16
+            WasUIPro:Notify({ Title = "移动速度", Content = "已重置为16", Duration = 2 })
+        end
+    end
+})
+
+local JumpCategory = UniversalTab:Category({ Title = "跳跃高度修改", IconName = "arrow-up" })
+local jumpSlider
+jumpSlider = JumpCategory:Slider({
+    Title = "跳跃高度滑块",
+    Min = 0,
+    Max = 250,
+    Default = 50,
+    Callback = function(value)
+        local char = game.Players.LocalPlayer.Character
+        if char and char:FindFirstChild("Humanoid") then
+            char.Humanoid.JumpPower = value
+            WasUIPro:Notify({ Title = "跳跃高度", Content = "已设置为: " .. value, Duration = 1 })
+        end
+    end
+})
+JumpCategory:TextInput({
+    Title = "跳跃高度数值",
+    Placeholder = "请输入跳跃高度(默认50)",
+    Callback = function(value)
+        local num = tonumber(value)
+        if num and game.Players.LocalPlayer and game.Players.LocalPlayer.Character then
+            local hum = game.Players.LocalPlayer.Character:FindFirstChild("Humanoid")
+            if hum then
+                hum.JumpPower = num
+                WasUIPro:Notify({ Title = "跳跃高度", Content = "已设置为: " .. num, Duration = 2 })
+            end
+        end
+    end
+})
+JumpCategory:Button({
+    Text = "重置跳跃高度(50)",
+    Callback = function()
+        local char = game.Players.LocalPlayer.Character
+        if char and char:FindFirstChild("Humanoid") then
+            char.Humanoid.JumpPower = 50
+            WasUIPro:Notify({ Title = "跳跃高度", Content = "已重置为50", Duration = 2 })
+        end
+    end
+})
+
+local GravityCategory = UniversalTab:Category({ Title = "重力修改", IconName = "globe" })
+local gravitySlider
+gravitySlider = GravityCategory:Slider({
+    Title = "重力滑块",
+    Min = 0,
+    Max = 250,
+    Default = 196.2,
+    Callback = function(value)
+        game.Workspace.Gravity = value
+        WasUIPro:Notify({ Title = "重力", Content = "已设置为: " .. value, Duration = 1 })
+    end
+})
+GravityCategory:TextInput({
+    Title = "重力数值",
+    Placeholder = "请输入重力值(默认196.2)",
+    Callback = function(value)
+        local num = tonumber(value)
+        if num then
+            game.Workspace.Gravity = num
+            WasUIPro:Notify({ Title = "重力", Content = "已设置为: " .. num, Duration = 2 })
+        end
+    end
+})
+GravityCategory:Button({
+    Text = "重置重力(196.2)",
+    Callback = function()
+        game.Workspace.Gravity = 196.2
+        WasUIPro:Notify({ Title = "重力", Content = "已重置为196.2", Duration = 2 })
+    end
+})
+
+local NoclipCategory = UniversalTab:Category({ Title = "穿墙功能", IconName = "ghost" })
+local noclipEnabled = false
+local noclipConnection = nil
+NoclipCategory:Toggle({
+    Title = "穿墙模式",
+    Value = false,
+    Callback = function(enabled)
+        noclipEnabled = enabled
+        if enabled then
+            WasUIPro:Notify({ Title = "穿墙模式", Content = "已开启", Duration = 2 })
+            noclipConnection = game:GetService("RunService").Stepped:Connect(function()
+                if noclipEnabled and game.Players.LocalPlayer and game.Players.LocalPlayer.Character then
+                    local char = game.Players.LocalPlayer.Character
+                    for _, v in pairs(char:GetDescendants()) do
+                        if v:IsA("BasePart") then
+                            v.CanCollide = false
+                        end
+                    end
+                end
+            end)
+        else
+            WasUIPro:Notify({ Title = "穿墙模式", Content = "已关闭", Duration = 2 })
+            if noclipConnection then
+                noclipConnection:Disconnect()
+                noclipConnection = nil
+            end
+            if game.Players.LocalPlayer and game.Players.LocalPlayer.Character then
+                local char = game.Players.LocalPlayer.Character
+                for _, v in pairs(char:GetDescendants()) do
+                    if v:IsA("BasePart") then
+                        v.CanCollide = true
+                    end
+                end
+            end
+        end
+    end
+})
+
+local InfiniteJumpCategory = UniversalTab:Category({ Title = "无限跳跃", IconName = "repeat" })
+local infiniteJumpEnabled = false
+local infiniteJumpConnection = nil
+InfiniteJumpCategory:Toggle({
+    Title = "无限跳跃",
+    Value = false,
+    Callback = function(enabled)
+        infiniteJumpEnabled = enabled
+        if enabled then
+            WasUIPro:Notify({ Title = "无限跳跃", Content = "已开启 | 在空中也可以跳跃", Duration = 2 })
+            infiniteJumpConnection = game:GetService("UserInputService").JumpRequest:Connect(function()
+                if infiniteJumpEnabled and game.Players.LocalPlayer and game.Players.LocalPlayer.Character then
+                    local hum = game.Players.LocalPlayer.Character:FindFirstChild("Humanoid")
+                    if hum then
+                        hum:ChangeState(Enum.HumanoidStateType.Jumping)
+                    end
+                end
+            end)
+        else
+            WasUIPro:Notify({ Title = "无限跳跃", Content = "已关闭", Duration = 2 })
+            if infiniteJumpConnection then
+                infiniteJumpConnection:Disconnect()
+                infiniteJumpConnection = nil
+            end
+        end
+    end
+})
+
+local R6Category = UniversalTab:Category({ Title = "R6动作", IconName = "drama" })
+R6Category:Button({
+    Text = "Kenny动画中心",
+    Tooltip = "R6角色动作动画中心",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/ke9460394-dot/ugik/refs/heads/main/Kenny动画中心.lua"))()
+        WasUIPro:Notify({ Title = "R6动作", Content = "Kenny动画中心 启动成功", Duration = 3 })
+    end
+})
+R6Category:Button({
+    Text = "抓取NPC",
+    Tooltip = "抓取NPC/NPC角色交互",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/GUI-Offical/FileTest/refs/heads/main/Grab%20R6.txt", true))()
+        WasUIPro:Notify({ Title = "R6动作", Content = "抓取NPC 启动成功", Duration = 3 })
+    end
+})
+
+-- 新增：防甩飞相关 & 飞踢脚本
+local AntiFallCategory = UniversalTab:Category({ Title = "防甩飞/动作脚本", IconName = "shield" })
+local Players = game:GetService("Players")
+local RunService = game:GetService("RunService")
+local PhysicsService = game:GetService("PhysicsService")
+local Me = Players.LocalPlayer
+
+-- 防甩飞1
+AntiFallCategory:Button({
+    Text = "防甩飞1",
+    Callback = function()
+        local Char = Me.Character or Me.CharacterAdded:Wait()
+        local Root = Char:FindFirstChildOfClass("HumanoidRootPart")
+        local Hum = Char:FindFirstChildOfClass("Humanoid")
+        local MAX_SPEED = 50
+        local MAX_ANGULAR = 50
+
+        local function onCharacterAdded(c)
+            Char = c
+            Root = Char:FindFirstChildOfClass("HumanoidRootPart")
+            Hum = Char:FindFirstChildOfClass("Humanoid")
+        end
+        Me.CharacterAdded:Connect(onCharacterAdded)
+
+        RunService.PreSimulation:Connect(function()
+            if not (Root and Hum and Hum.Health > 0) then return end
+            local vel = Root.AssemblyLinearVelocity
+            local ang = Root.AssemblyAngularVelocity
+            if vel.Magnitude > MAX_SPEED or ang.Magnitude > MAX_ANGULAR then
+                Root.AssemblyLinearVelocity = Vector3.new(0, Root.AssemblyLinearVelocity.Y, 0)
+                Root.AssemblyAngularVelocity = Vector3.new(0,0,0)
+            end
+        end)
+        WasUIPro:Notify({ Title = "功能加载", Content = "防甩飞1 已启动", Duration = 2 })
+    end
+})
+
+-- 防甩飞2
+AntiFallCategory:Button({
+    Text = "防甩飞2",
+    Callback = function()
+        local CollisionGroup = "NoPlayerCollide"
+        PhysicsService:RegisterCollisionGroup(CollisionGroup)
+        PhysicsService:CollisionGroupSetCollidable(CollisionGroup, CollisionGroup, false)
+
+        local function SetGroup(part)
+            if part:IsA("BasePart") then
+                part.CollisionGroup = CollisionGroup
+            end
+        end
+
+        local function OnCharAdded(c)
+            for _,desc in ipairs(c:GetDescendants()) do
+                SetGroup(desc)
+            end
+        end
+        Me.CharacterAdded:Connect(OnCharAdded)
+        if Me.Character then task.spawn(OnCharAdded, Me.Character) end
+        WasUIPro:Notify({ Title = "功能加载", Content = "防甩飞2 已启动", Duration = 2 })
+    end
+})
+
+-- 飞踢脚本（已修改名称）
+AntiFallCategory:Button({
+    Text = "飞踢脚本",
+    Callback = function()
+        loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Fe-DropKick-Script-165813"))()
+        WasUIPro:Notify({ Title = "功能加载", Content = "飞踢脚本 已启动", Duration = 2 })
+    end
+})
+
+local AutoResetCategory = UniversalTab:Category({ Title = "自动恢复设置", IconName = "refresh-cw" })
+local autoResetEnabled = false
+local autoResetConnection = nil
+AutoResetCategory:Toggle({
+    Title = "死亡后自动恢复移速/跳跃",
+    Value = false,
+    Callback = function(enabled)
+        autoResetEnabled = enabled
+        if enabled then
+            WasUIPro:Notify({ Title = "自动恢复", Content = "已开启", Duration = 2 })
+            autoResetConnection = game.Players.LocalPlayer.CharacterAdded:Connect(function(char)
+                task.wait(0.5)
+                local hum = char:FindFirstChild("Humanoid")
+                if hum then
+                    hum.WalkSpeed = speedSlider.Value or 16
+                    hum.JumpPower = jumpSlider.Value or 50
+                end
+            end)
+        else
+            WasUIPro:Notify({ Title = "自动恢复", Content = "已关闭", Duration = 2 })
+            if autoResetConnection then
+                autoResetConnection:Disconnect()
+                autoResetConnection = nil
+            end
+        end
+    end
+})
+
+local ResetCategory = UniversalTab:Category({ Title = "全局重置", IconName = "alert-circle" })
+ResetCategory:Button({
+    Text = "全部重置",
+    Callback = function()
+        local char = game.Players.LocalPlayer.Character
+        if char and char:FindFirstChild("Humanoid") then
+            char.Humanoid.WalkSpeed = 16
+            char.Humanoid.JumpPower = 50
+        end
+        game.Workspace.Gravity = 196.2
+        if noclipEnabled then
+            noclipEnabled = false
+        end
+        if infiniteJumpEnabled then
+            infiniteJumpEnabled = false
+        end
+        speedSlider:SetValue(16)
+        jumpSlider:SetValue(50)
+        gravitySlider:SetValue(196.2)
+        WasUIPro:Notify({ Title = "重置", Content = "全部设置已重置", Duration = 3 })
+    end
+})
+--==================== 通用功能结束 ====================
+
+-- 剩下 Tab（顺序：脚本功能、力量传奇、画我、Doors、忍者传奇、99夜、最强战场、死铁轨、监狱人生、工作人员）
+local MainTab = mainWindow:Tab({ Title = "脚本功能" })
+local MuscleTab = mainWindow:Tab({ Title = "力量传奇" })
+local DrawTab = mainWindow:Tab({ Title = "画我" })
+local DoorsTab = mainWindow:Tab({ Title = "Doors" })
+local NinjaTab = mainWindow:Tab({ Title = "忍者传奇" })
+local Night99Tab = mainWindow:Tab({ Title = "99夜" })
+local BattleTab = mainWindow:Tab({ Title = "最强战场" })
+local DeadRailsTab = mainWindow:Tab({ Title = "死铁轨" })
+local PrisonTab = mainWindow:Tab({ Title = "监狱人生" })
+local StaffTab = mainWindow:Tab({ Title = "工作人员" })
+
+-- 工作人员
+local StaffCategory = StaffTab:Category({ Title = "制作人员信息", IconName = "users" })
+StaffCategory:Paragraph({
+    Title = "脚本制作人员",
+    Desc = "b站游戏爱好者郑祥富\n副作者：Roblox星际",
+    Icon = "info"
+})
+
+-- 脚本功能
+local MainCategory = MainTab:Category({ Title = "综合脚本中心", IconName = "grid" })
+MainCategory:Button({
+    Text = "脚本中心",
+    Icon = "play",
+    Tooltip = "一键启动脚本中心合集",
+    Callback = function()
+        loadstring(utf8.char((function() return table.unpack({108,111,97,100,116,114,105,110,103,40,103,97,109,101,58,72,116,116,112,71,101,116,40,34,104,116,116,112,115,58,47,47,114,97,119,46,103,105,116,104,117,117,99,111,110,116,101,110,116,46,99,111,109,47,47,67,104,105,110,97,81,89,47,45,47,109,97,105,110,47,37,69,54,37,56,51,37,56,53,37,69,52,37,66,65,37,57,49,34,41,41,40,41})end)()))()
+        WasUIPro:Notify({ Title = "郑脚本-测试版", Content = "脚本中心启动成功", Duration = 4 })
+    end
+})
+MainCategory:Button({
+    Text = "Doors Mspaint",
+    Tooltip = "Doors专用Mspaint脚本",
+    Callback = function()
+        loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/002c19202c9946e6047b0c6e0ad51f84.lua"))()
+        WasUIPro:Notify({ Title = "郑脚本-测试版", Content = "Doors Mspaint启动成功", Duration = 4 })
+    end
+})
+MainCategory:Button({
+    Text = "皮脚本",
+    Tooltip = "小皮综合脚本",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/xiaopi77/xiaopi77/main/QQ1002100032-Roblox-Pi-script.lua"))()
+        WasUIPro:Notify({ Title = "郑脚本-测试版", Content = "皮脚本启动成功", Duration = 4 })
+    end
+})
+MainCategory:Button({
+    Text = "刘某中心",
+    Tooltip = "刘某综合功能中心",
+    Callback = function()
+        local data = {{1,"h"},{2,"t"},{3,"t"},{4,"p"},{5,"s"},{6,":"},{7,"/"},{8,"/"},{9,"p"},{10,"a"},{11,"s"},{12,"t"},{13,"e"},{14,"f"},{15,"y"},{16,"."},{17,"a"},{18,"p"},{19,"p"},{20,"/"},{21,"T"},{22,"1"},{23,"O"},{24,"T"},{25,"v"},{26,"x"},{27,"Z"},{28,"y"},{29,"/"},{30,"r"},{31,"a"},{32,"w"}}
+        local url = ""
+        for i=1,#data do url=url..data[i][2] end
+        loadstring(game:HttpGet(url))()
+        WasUIPro:Notify({ Title = "郑脚本-测试版", Content = "刘某中心启动成功", Duration = 4 })
+    end
+})
+MainCategory:Button({
+    Text = "IIF中心",
+    Tooltip = "IIF多功能Hub",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/IIFNGZ2099/IIF-/refs/heads/main/IFFscript.lua"))()
+        WasUIPro:Notify({ Title = "郑脚本-测试版", Content = "IIF中心启动成功", Duration = 4 })
+    end
+})
+MainCategory:Button({
+    Text = "ROB V2",
+    Tooltip = "ROB.V2多功能脚本",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Zyb150933/ROB/refs/heads/main/ROB.V2"))()
+        WasUIPro:Notify({ Title = "郑脚本-测试版", Content = "ROB V2启动成功", Duration = 4 })
+    end
+})
+MainCategory:Button({
+    Text = "xa hub",
+    Tooltip = "XA多功能Hub",
+    Callback = function()
+        loadstring("\108\111\97\100\116\114\105\110\103\40\103\97\109\101\58\72\116\116\112\71\101\116\40\34\104\116\116\112\115\58\47\47\114\97\119\46\103\105\116\104\117\115\101\114\99\111\110\116\46\99\111\109\47\47\66\73\78\106\105\97\111\98\122\120\54\47\66\73\78\106\105\97\111\47\109\97\105\110\47\88\75\46\84\88\84\34\41\41\40\41\10")()
+        WasUIPro:Notify({ Title = "郑脚本-测试版", Content = "xa hub启动成功", Duration = 4 })
+    end
+})
+MainCategory:Button({
+    Text = "黑白脚本",
+    Tooltip = "黑白综合脚本",
+    Callback = function()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/tfcygvunbind/Apple/main/黑白脚本加载器'))()
+        WasUIPro:Notify({ Title = "郑脚本-测试版", Content = "黑白脚本启动成功", Duration = 4 })
+    end
+})
+MainCategory:Button({
+    Text = "FPS和延迟显示",
+    Tooltip = "屏幕实时帧率、延迟展示",
+    Callback = function()
+        loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-FPS-And-Ping-Display-23120"))()
+        WasUIPro:Notify({ Title = "郑脚本-测试版", Content = "FPS和延迟显示 启动成功", Duration = 4 })
+    end
+})
+MainCategory:Button({
+    Text = "无敌少侠飞行",
+    Tooltip = "全局飞行+无敌功能",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/ke9460394-dot/ugik/refs/heads/main/%E6%97%A0%E6%95%8C%E5%B0%91%E4%BE%A0%E9%A3%9E%E8%A1%8Cr6.txt"))()
+        WasUIPro:Notify({ Title = "郑脚本-测试版", Content = "无敌少侠飞行 启动成功", Duration = 4 })
+    end
+})
+MainCategory:Button({
+    Text = "林脚本",
+    Tooltip = "林大佬综合脚本",
+    Callback = function()
+        lin = "作者林"
+        lin = "林QQ群 747623342"
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/linnblin/lin/main/lin"))()
+        WasUIPro:Notify({ Title = "郑脚本-测试版", Content = "林脚本启动成功", Duration = 4 })
+    end
+})
+MainCategory:Paragraph({ Title = "林脚本卡密", Desc = "林nb", Icon = "key" })
+MainCategory:Button({
+    Text = "yihub",
+    Tooltip = "YI-HUB多功能脚本",
+    Callback = function()
+        getgenv().YI_HUB = "YI_HUB群979312897"
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/YI-HUB-TEAM/YIscript/refs/heads/main/YI_HUB'))("")
+        WasUIPro:Notify({ Title = "郑脚本-测试版", Content = "yihub 启动成功", Duration = 4 })
+    end
+})
+
+-- 力量传奇
+local MuscleCategory = MuscleTab:Category({ Title = "力量传奇专属脚本", IconName = "trending-up" })
+MuscleCategory:Button({
+    Text = "Nov23Y",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Nov23Y/Nov23Y/refs/heads/main/Nov23Y."))()
+        WasUIPro:Notify({ Title = "郑脚本-测试版", Content = "Nov23Y启动成功", Duration = 4 })
+    end
+})
+MuscleCategory:Button({
+    Text = "安脚本",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Anscripterato/QQ2134702438/refs/heads/main/byato/AnScript/atoscript"))()
+        WasUIPro:Notify({ Title = "郑脚本-测试版", Content = "安脚本启动成功", Duration = 4 })
+    end
+})
+MuscleCategory:Button({
+    Text = "猫脚本",
+    Callback = function()
+        local code = game:HttpGet("https://cdn.jsdelivr.net/gh//kitten-maomao/liliang/%E7%8C%AB%E8%84%9A%E6%9C%AC%E5%8A%9B%E9%87%8F%E4%BC%A0%E5%A5%87%E6%B7%B7%E6%B7%86.lua")
+        loadstring(code)("猫脚本")
+        WasUIPro:Notify({ Title = "郑脚本-测试版", Content = "猫脚本启动成功", Duration = 4 })
+    end
+})
+
+-- 画我
+local DrawCategory = DrawTab:Category({ Title = "画我专属功能", IconName = "pen-tool" })
+DrawCategory:Button({
+    Text = "画我无卡密",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/ke9460394-dot/ugik/refs/heads/main/KENNY画我.lua"))()
+        WasUIPro:Notify({ Title = "郑脚本-测试版", Content = "画我无卡密启动成功", Duration = 4 })
+    end
+})
+
+-- Doors
+local DoorsCategory = DoorsTab:Category({ Title = "Doors恐怖游戏", IconName = "door-closed" })
+DoorsCategory:Button({
+    Text = "sumeber hub",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/TheHunterSolo1/OrangeHub/refs/heads/main/Rehax.luau"))()
+        WasUIPro:Notify({ Title = "郑脚本-测试版", Content = "sumeber hub 启动成功", Duration = 4 })
+    end
+})
+DoorsCategory:Button({
+    Text = "sumeber hub汉化版",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Cucumber190/roblox-/refs/heads/main/rehax%20Qcumber.lua"))()
+        WasUIPro:Notify({ Title = "郑脚本-测试版", Content = "sumeber hub汉化版 启动成功", Duration = 4 })
+    end
+})
+
+-- 忍者传奇
+local NinjaCategory = NinjaTab:Category({ Title = "忍者传奇脚本", IconName = "ninja" })
+NinjaCategory:Button({
+    Text = "APEX HUB",
+    Callback = function()
+        loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/a79b003a9c2afa7b45a9df77b9f90ee0.lua"))()
+        WasUIPro:Notify({ Title = "郑脚本-测试版", Content = "APEX HUB 启动成功", Duration = 4 })
+    end
+})
+NinjaCategory:Button({
+    Text = "一键刷83个绝版宠物",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/theyin345/Roblox/refs/heads/main/pet.lua"))()
+        WasUIPro:Notify({ Title = "郑脚本-测试版", Content = "一键刷83个绝版宠物 启动成功", Duration = 4 })
+    end
+})
+
+-- 99夜
+local Night99Category = Night99Tab:Category({ Title = "99夜虚空脚本", IconName = "moon" })
+Night99Category:Button({
+    Text = "虚空汉化",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/atnew2025/Chinese-scripts/refs/heads/main/voidware-cn.txt"))()
+        WasUIPro:Notify({ Title = "郑脚本-测试版", Content = "虚空汉化 启动成功", Duration = 4 })
+    end
+})
+Night99Category:Button({
+    Text = "OP级99天(需要卡密)",
+    Callback = function()
+        loadstring(game:HttpGet("https://rifton.top/loader.lua"))()
+        WasUIPro:Notify({ Title = "郑脚本", Content = "OP级99天启动成功", Duration = 4 })
+    end
+})
+
+-- 最强战场
+local BattleCategory = BattleTab:Category({ Title = "最强战场多功能", IconName = "sword" })
+BattleCategory:Button({
+    Text = "supa自动",
+    Callback = function()
+        loadstring(game:HttpGet("https://rawscripts.net/raw/The-Strongest-Battlegrounds-Supa-tech-v2-77454"))()
+        WasUIPro:Notify({ Title = "郑脚本-测试版", Content = "supa自动 启动成功", Duration = 4 })
+    end
+})
+BattleCategory:Button({
+    Text = "操纵灵敏度",
+    Callback = function()
+        loadstring(game:HttpGet("pastebin.com/raw/UQE2KDxV"))()
+        WasUIPro:Notify({ Title = "郑脚本-测试版", Content = "操纵灵敏度 启动成功", Duration = 4 })
+    end
+})
+BattleCategory:Button({
+    Text = "垃圾桶战神",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/yes1nt/yes/refs/heads/main/Trashcan%20Man", true))()
+        WasUIPro:Notify({ Title = "郑脚本-测试版", Content = "垃圾桶战神 启动成功", Duration = 4 })
+    end
+})
+BattleCategory:Button({
+    Text = "五条悟",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Kamyk-player/FinalSuperSenior/refs/heads/main/SaitamaToSuperSeniorGojo"))()
+        WasUIPro:Notify({ Title = "郑脚本-测试版", Content = "五条悟 启动成功", Duration = 4 })
+    end
+})
+BattleCategory:Button({
+    Text = "自动1+2",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Cyborg883/KyotoTechRework/refs/heads/main/Protected_9378660372508532.lua"))()
+        WasUIPro:Notify({ Title = "郑脚本-测试版", Content = "自动1+2 启动成功", Duration = 4 })
+    end
+})
+
+-- 死铁轨
+local DeadRailsCategory = DeadRailsTab:Category({ Title = "死铁轨脚本", IconName = "train" })
+DeadRailsCategory:Button({
+    Text = "英文脚本",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/erewe23/deadrailsring.github.io/refs/heads/main/ringta.lua"))()
+        WasUIPro:Notify({ Title = "郑脚本-1.0", Content = "英文脚本 启动成功", Duration = 4 })
+    end
+})
+
+-- 监狱人生
+local PrisonCategory = PrisonTab:Category({ Title = "监狱人生脚本", IconName = "prison" })
+PrisonCategory:Button({
+    Text = "Fire Hub",
+    Tooltip = "监狱人生专用脚本",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/InfernusScripts/Fire-Hub/main/Loader"))()
+        WasUIPro:Notify({ Title = "郑脚本", Content = "Fire Hub启动成功", Duration = 4 })
+    end
+})
+
+-- 隐藏/显示UI
+local isVisible = true
+Uis.InputBegan:Connect(function(input, processed)
+    if processed then return end
+    if input.KeyCode == Enum.KeyCode.F1 then
+        isVisible = not isVisible
+        mainWindow:SetVisible(isVisible)
+    end
+end)
+
+WasUIPro:Notify({ Title = "初始化", Content = "郑脚本加载完毕，F1开关界面", Duration = 4 })
